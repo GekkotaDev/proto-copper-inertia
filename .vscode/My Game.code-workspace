@@ -1,0 +1,71 @@
+{
+  "folders": [
+    {
+      "name": "Game",
+      "path": "..",
+    },
+  ],
+  "extensions": {
+    "recommendations": [
+      "geequlim.godot-tools",
+
+      //* C# Support
+      // "ms-dotnettools.csharp",
+      // "ms-dotnettools.vscode-dotnet-runtime",
+
+      //* Rust Support
+      "vadimcn.vscode-lldb",
+      "rust-lang.rust-analyzer",
+
+      //* Nice additions.
+      "aaron-bond.better-comments",
+      "adpyke.codesnap",
+      "albert.TabOut",
+      "alefragnani.Bookmarks",
+      "antfu.smart-clicks",
+      "bierner.github-markdown-preview",
+      "christian-kohler.path-intellisense",
+      "eamodio.gitlens",
+      "GitHub.vscode-pull-request-github",
+      "Gruntfuggly.todo-tree",
+      "oxc.oxc-vscode",
+      "usernamehw.errorlens",
+    ],
+  },
+  "settings": {
+    //? Per language settings
+    "[json]": {
+      "editor.defaultFormatter": "oxc.oxc-vscode",
+      "editor.tabSize": 2,
+    },
+    "[gdscript]": {
+      "editor.tabSize": 4,
+      "editor.insertSpaces": false,
+      "editor.rulers": [
+        {
+          "column": 100,
+        },
+      ],
+    },
+    "[markdown]": {
+      "editor.wordWrap": "bounded",
+      "editor.wordWrapColumn": 88,
+    },
+
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+      //   "addons.jsonc": "*.csproj, *.sln",
+      "project.godot": "export_presets.cfg, icon.svg",
+      "pyproject.toml": ".python-version, mkdocs.yml, uv.lock, *.py",
+      "*.tres": "${capture}.gd, ${capture}.cs",
+      "*.tscn": "${capture}.gd, ${capture}.cs",
+    },
+    "files.exclude": {
+      "**/*.import": true,
+      "**/*.uid": true,
+    },
+  },
+}

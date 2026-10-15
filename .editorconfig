@@ -1,0 +1,10 @@
+root = true
+
+[*.gd]
+gdscript_formatter_format_on_save = true
+
+[*.cs]
+csharp_new_line_before_open_brace = false
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
