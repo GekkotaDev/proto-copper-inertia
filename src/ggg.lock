@@ -118,7 +118,7 @@ archive_sha = "5f4674b9de97b471c23185c554f077b1229de14103274479a21b076d6cea49b7"
 name = "wcsaferesourceformat"
 url = "https://gitlab.com/worstconcept/wcsaferesourceformat/-/archive/12b2e0c72d7604db40d47c89b29d02b90ebb2d63.zip"
 archive_sha = "7b887738552d60e593b1a41a1481118b4e12aec1f7ebd205d76a3f9a71c545a8"
-asset_library_id = 4718
+asset_id = 4718
 asset_version = 5
 
 [[dependency]]
@@ -135,7 +135,7 @@ archive_sha = "8cd188e837f845ca941d0a52226759ffcae4207626458a9343ceb8eb6c4b26f9"
 name = "instance-dock"
 url = "https://github.com/KoBeWi/Godot-Instance-Dock/archive/9e7f9664f8a020c0b31220901c06a49012135f40.zip"
 archive_sha = "98140cda5971c6d9706d647a8dacfc6274528d0f2ff9088620e1c63a89260d71"
-asset_library_id = 1421
+asset_id = 1421
 asset_version = 10
 
 [[dependency]]
@@ -152,6 +152,11 @@ archive_sha = "0910411f8dbc0da8920f6c8bbbb6397c347cd9f2f193942468a702dfb11d5f0e"
 name = "log"
 url = "https://github.com/russmatney/log.gd/archive/refs/tags/v0.2.2.zip"
 archive_sha = "dafd25ae50c74e8974e4cca7cd9dc35067d69b748b6584698b1a67dea03d18a3"
+
+[[dependency]]
+name = "godot-prototype-texture"
+url = "https://github.com/PiCode9560/Godot-Prototype-Texture/archive/refs/tags/v1.2.0.zip"
+archive_sha = "b9563525bc76e6c2a9d8c30bba3bd387f3577fe6085a5da0b1099c3cf652b71d"
 
 [[dependency]]
 name = "gloot"
