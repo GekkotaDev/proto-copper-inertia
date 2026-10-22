@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cfo1gal56kemk"]
+
+[ext_resource type="Script" uid="uid://7ux4rjcc5wwt" path="res://scenes/screens/vestibular_warning/vestibular_warning.gd" id="1_d362f"]
+[ext_resource type="Texture2D" uid="uid://3x0g46s72hjy" path="res://addons/at-icons/mesh/speech_bubble_exclamation.svg" id="2_d362f"]
+[ext_resource type="FontFile" uid="uid://bj8xss6y0ah08" path="res://assets/typefaces/atkinson_hyperlegible/otf/AtkinsonHyperlegibleNext-ExtraBold.otf" id="3_gcbwe"]
+[ext_resource type="FontFile" uid="uid://veexh0k8ukjy" path="res://assets/typefaces/atkinson_hyperlegible/otf/AtkinsonHyperlegibleNext-Regular.otf" id="4_ncnww"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nup64"]
+font = ExtResource("3_gcbwe")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_a7g22"]
+font = ExtResource("4_ncnww")
+
+[sub_resource type="LabelSettings" id="LabelSettings_r81w6"]
+font = ExtResource("3_gcbwe")
+
+[node name="VestibularWarning" type="Node" unique_id=983254170]
+script = ExtResource("1_d362f")
+metadata/_custom_type_script = "uid://dpxn232fvunp8"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1067056112]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=107326653]
+custom_minimum_size = Vector2(512, 0)
+custom_maximum_size = Vector2(512, -1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -11.5
+offset_right = 36.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=2078666056]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=869029636]
+texture_filter = 5
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1101745835]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_d362f")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=817910381]
+layout_mode = 2
+text = "WARNING"
+label_settings = SubResource("LabelSettings_nup64")
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1762179846]
+layout_mode = 2
+texture = ExtResource("2_d362f")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1729954107]
+layout_mode = 2
+text = "This game may not be suited for those with photosensitivity, motion sickness, or other forms of vestibular disorders. If at any point you feel discomfort during play, please exit the game."
+label_settings = SubResource("LabelSettings_a7g22")
+horizontal_alignment = 3
+autowrap_mode = 3
+justification_flags = 35
+
+[node name="Label2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1558029900]
+layout_mode = 2
+text = "Caution is advised at your discretion."
+label_settings = SubResource("LabelSettings_a7g22")
+horizontal_alignment = 1
+autowrap_mode = 3
+justification_flags = 35
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect" unique_id=2077723639]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 64
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer2" unique_id=1957115442]
+layout_mode = 2
+text = "Press Any Button To Continue"
+label_settings = SubResource("LabelSettings_r81w6")
+horizontal_alignment = 1

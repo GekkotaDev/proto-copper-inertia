@@ -1,10 +1,16 @@
 extends Control
 
-
-func _start(data: Variant):
-	pass
+@export var player: AnimationPlayer
 
 
-func next_scene():
-	GlobalSceneManager.queue_set_scene(&"Main Menu")
-	GlobalSceneManager.apply()
+func _ready():
+	player.play(&"splash")
+	player.animation_finished.connect(next_scene)
+
+
+func next_scene(animation_name: StringName):
+	if not animation_name.contains("splash"):
+		return
+	
+	MultiSceneManager.global.queue_set_scene(&"Main Menu")
+	MultiSceneManager.global.apply()
