@@ -118,7 +118,7 @@ archive_sha = "5f4674b9de97b471c23185c554f077b1229de14103274479a21b076d6cea49b7"
 name = "wcsaferesourceformat"
 url = "https://gitlab.com/worstconcept/wcsaferesourceformat/-/archive/12b2e0c72d7604db40d47c89b29d02b90ebb2d63.zip"
 archive_sha = "7b887738552d60e593b1a41a1481118b4e12aec1f7ebd205d76a3f9a71c545a8"
-asset_id = 4718
+asset_library_id = 4718
 asset_version = 5
 
 [[dependency]]
@@ -135,7 +135,7 @@ archive_sha = "8cd188e837f845ca941d0a52226759ffcae4207626458a9343ceb8eb6c4b26f9"
 name = "instance-dock"
 url = "https://github.com/KoBeWi/Godot-Instance-Dock/archive/9e7f9664f8a020c0b31220901c06a49012135f40.zip"
 archive_sha = "98140cda5971c6d9706d647a8dacfc6274528d0f2ff9088620e1c63a89260d71"
-asset_id = 1421
+asset_library_id = 1421
 asset_version = 10
 
 [[dependency]]
@@ -184,3 +184,19 @@ archive_sha = "c6c8b785a7ef865f5d6eaf9dbb149fc3228a7798e24bd2531227a41823e6ad29"
 name = "goactions"
 url = "https://github.com/wokidoo/GoActions/archive/refs/tags/v1.1.zip"
 archive_sha = "e4eef3b3cc86db0157dcfe23ffc12a6d139b675a635d0457da32c0c90dbbcec9"
+
+[[dependency]]
+name = "csg_blockout"
+url = "https://github.com/qwqzhanqwq/Godot-CSG-Blockout/releases/download/v3.0.0/csg_blockout-3.0.0.zip"
+archive_sha = "12241fb6af07370c58d603c70b7c0e44a47616854f4ed1e347e82d79bd919d30"
+
+[[dependency]]
+name = "debug_draw_3d"
+url = "https://github.com/DmitriySalnikov/godot_debug_draw_3d/releases/download/1.7.3/debug-draw-3d_1.7.3.zip"
+archive_sha = "e16c7e1bd7f4c30d8e503ce424caef5b9e2fd5f44094cf00be66c334aff54c70"
+
+[[dependency]]
+name = "rich_text_3d"
+git = "https://github.com/mszylkowski/rich-text-3d-godot"
+rev = "ac618d0b3989fd9797f1ac653c2a899b2fcd0d45"
+sha = "ac618d0b3989fd9797f1ac653c2a899b2fcd0d45"

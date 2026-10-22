@@ -38,11 +38,15 @@ DialogueManager="*uid://c3rodes2l3gxb"
 AchievementManager="*uid://dj1bkxbqna8jt"
 GUIDE="*uid://p2jwrgjcbexr"
 MultiSceneManager="*uid://bgc2ku4o180lj"
-SweetSettings="*uid://cbnx6yl6yesvy"
+GameSettings="*uid://bhfxl4qnm6udr"
+
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/debug_draw_3d"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/TweenFX/plugin.cfg", "res://addons/TweenSuite/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/panku_console/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/sweet-settings/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
+enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/TweenFX/plugin.cfg", "res://addons/TweenSuite/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/panku_console/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/rich_text_3d/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
 
 [file_customization]
 
