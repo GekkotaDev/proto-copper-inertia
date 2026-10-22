@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cb2ks1j5i2hyg"]
+
+[ext_resource type="Script" uid="uid://cqncr1fr6r6cv" path="res://cases/battle/scenes/composables/roundtable/roundtable.gd" id="1_dku5e"]
+
+[node name="Roundtable" type="Node3D" unique_id=32773750]
+script = ExtResource("1_dku5e")
