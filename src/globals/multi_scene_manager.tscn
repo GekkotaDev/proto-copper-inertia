@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bgc2ku4o180lj"]
+
+[ext_resource type="Script" uid="uid://che4enu7wrksv" path="res://globals/multi_scene_manager.gd" id="1_1hp2e"]
+[ext_resource type="Script" uid="uid://duewdbbsl6u0s" path="res://addons/scenic/nodes/scene_manager.gd" id="2_ikcwe"]
+[ext_resource type="Script" uid="uid://y1x7ms1bt3xb" path="res://addons/scenic/resources/scene_info.gd" id="3_4sbb4"]
+[ext_resource type="Script" uid="uid://4u0ap31txany" path="res://addons/scenic/nodes/transitions/fade_transition.gd" id="4_4sbb4"]
+
+[sub_resource type="Resource" id="Resource_ta01b"]
+script = ExtResource("3_4sbb4")
+name = &"Splash Screen"
+uid = 4516519536606017648
+_path = "res://scenes/screens/splash/splash_screen.tscn"
+
+[sub_resource type="Resource" id="Resource_ikcwe"]
+script = ExtResource("3_4sbb4")
+name = &"Main Menu"
+uid = 6752922656810977174
+_path = "res://scenes/screens/main_menu/main_menu.tscn"
+
+[node name="MultiSceneManager" type="Node" unique_id=2040598731 node_paths=PackedStringArray("managers")]
+script = ExtResource("1_1hp2e")
+managers = {
+&"global": NodePath("Global")
+}
+
+[node name="Global" type="Node" parent="." unique_id=858001991]
+script = ExtResource("2_ikcwe")
+global = false
+_scenes = {
+&"Main Menu": SubResource("Resource_ikcwe"),
+&"Splash Screen": SubResource("Resource_ta01b")
+}
+metadata/_custom_type_script = "uid://duewdbbsl6u0s"
+
+[node name="FadeTransition" type="CanvasLayer" parent="Global" unique_id=1669317058 node_paths=PackedStringArray("_curtain")]
+script = ExtResource("4_4sbb4")
+_curtain = NodePath("ColorRect")
+_duration = 1.0
+metadata/_custom_type_script = "uid://4u0ap31txany"
+
+[node name="ColorRect" type="ColorRect" parent="Global/FadeTransition" unique_id=41179640]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
