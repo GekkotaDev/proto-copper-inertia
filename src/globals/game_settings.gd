@@ -1,6 +1,6 @@
 extends Node
 
-@export var file_path: Path
+@export var file_path: FilePath
 @export var defaults: Array[ConfigSection]
 
 @export_group("Options")
