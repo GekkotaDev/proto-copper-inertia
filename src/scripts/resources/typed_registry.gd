@@ -1,4 +1,40 @@
 @abstract
+
+@abstract
+
+@abstract
+@abstract
+
+@abstract
+@abstract
+@abstract
+@abstract
+
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
 @tool
 class_name TypedRegistry extends Registry
 
@@ -9,7 +45,11 @@ class_name TypedRegistry extends Registry
 ## [param type_hint] and [param cache_mode] are passed down to
 ## [method ResourceLoader.load].
 @abstract
-func typed_load_entry(id: StringName)
+func typed_load_entry(
+	id: StringName,
+	type_hint: String = "",
+	cache_mode: ResourceLoader.CacheMode = ResourceLoader.CacheMode.CACHE_MODE_REUSE,
+)
 
 
 @abstract
@@ -22,6 +62,8 @@ func typed_load_entries(ids: Array[StringName])
 ##
 ## [param type_hint] and [param cache_mode] are passed down to
 ## [method ResourceLoader.load].
+
+
 @abstract
 func typed_load_all_blocking()
 
