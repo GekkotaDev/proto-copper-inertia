@@ -1,41 +1,5 @@
-@abstract
-
-@abstract
-
-@abstract
-@abstract
-
-@abstract
-@abstract
-@abstract
-@abstract
-
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
-@abstract
 @tool
+@abstract
 class_name TypedRegistry extends Registry
 
 
@@ -54,7 +18,6 @@ func typed_load_entry(
 
 @abstract
 func typed_load_entries(ids: Array[StringName])
-
 
 ## Loads all registered resources in a blocking manner. Returns a dictionary
 ## mapping string IDs to their loaded [Resource] instances.
