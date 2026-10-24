@@ -2,7 +2,6 @@ extends Node
 
 @export var file_path: FilePath
 @export var defaults: Array[ConfigSection]
-
 @export_group("Options")
 @export var ui_group: String
 
@@ -11,7 +10,7 @@ var config := ConfigFile.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if !FileAccess.file_exists(file_path.as_user()):
+	if not FileAccess.file_exists(file_path.as_user()):
 		for section in defaults:
 			section.apply(config)
 		config.save(file_path.as_user())
