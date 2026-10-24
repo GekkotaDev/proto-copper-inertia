@@ -2,7 +2,6 @@
 class_name TurnBasedRotation extends Node3D
 
 signal on_victory
-
 signal victory
 
 # A RandomEncounter or SetEncounter reusable node populates the entities array.
@@ -15,17 +14,17 @@ var entities_deck: Array[TurnBasedEntity] = []:
 		return entities_deck
 
 #  TODO
-#*
-#* [ ] Implement FieldEncounter nodes and its respective subclasses
-#*   [ ] RandomEncounter: array of resources with weighted enemy table
-#*   [ ] SetEncounter: says it on the tin
-#* [ ] Animations
-#* [ ] Player does not need behavior tree, just await until they've selected option.
-#* [ ] Make sure it doesn't get stuck awaiting
-#*
+# *
+# * [ ] Implement FieldEncounter nodes and its respective subclasses
+# *   [ ] RandomEncounter: array of resources with weighted enemy table
+# *   [ ] SetEncounter: says it on the tin
+# * [ ] Animations
+# * [ ] Player does not need behavior tree, just await until they've selected option.
+# * [ ] Make sure it doesn't get stuck awaiting
+# *
 #! NO AI
 
-#* NOTE: Do C# physics when more lucid.
+# * NOTE: Do C# physics when more lucid.
 
 
 # Called when the node enters the scene tree for the first time.
