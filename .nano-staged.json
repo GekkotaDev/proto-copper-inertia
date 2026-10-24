@@ -1,3 +1,3 @@
 {
-  "*.c": "echo"
+  "*.gd": "gdstyle fmt"
 }
