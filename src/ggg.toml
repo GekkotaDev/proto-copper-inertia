@@ -12,6 +12,13 @@ sha256 = "980c0300e334288a192046ea9445658f7cec1658356a9869e696429a159aa145"
 map = [{ from = "addons/aspect_ratio_resize_container" }]
 
 [[dependency]]
+name = "asset_placer"
+url = "https://github.com/levinzonr/godot-asset-placer/archive/refs/tags/1.6.0.zip"
+map = [
+    { from = "godot-asset-placer-1.6.0/addons/asset_placer", to = "addons/asset_placer" },
+]
+
+[[dependency]]
 name = "at-icons"
 url = "https://github.com/Voxybuns/at-icons/releases/download/v1.5.0/at-icons_v1.5.0.zip"
 map = [{ from = "addons/at-icons", to = "addons/at-icons" }]
@@ -26,8 +33,8 @@ map = [
 
 [[dependency]]
 name = "csg_blockout"
-url = "https://github.com/qwqzhanqwq/Godot-CSG-Blockout/releases/download/v3.0.0/csg_blockout-3.0.0.zip"
-sha = "12241fb6af07370c58d603c70b7c0e44a47616854f4ed1e347e82d79bd919d30"
+url = "https://github.com/qwqzhanqwq/Godot-CSG-Blockout/releases/download/v3.1.0/csg_blockout-3.1.0.zip"
+sha = "21196345085cef84d02e6c1bbe39bcb5b7182284bc0aecd0b8f6b6fe3c58d5d0"
 map = [{ from = "addons/csg_blockout" }]
 
 [[dependency]]
@@ -78,6 +85,12 @@ url = "https://github.com/MikeSchulze/gdUnit4/archive/refs/tags/v6.0.0.zip"
 map = [{ from = "gdUnit4-6.0.0/addons/gdUnit4", to = "addons/gdUnit4" }]
 
 [[dependency]]
+name = "gesture_recognizer"
+git = "https://github.com/Pecesitooo/Gesture-Recognizer-Godot.git"
+rev = "460d99e06e1edcd6df6e112646d2e0f94d2b4902"
+map = [{ from = "addons/gesture_recognizer", to = "addons/gesture_recognizer" }]
+
+[[dependency]]
 name = "goactions"
 url = "https://github.com/wokidoo/GoActions/archive/refs/tags/v1.1.zip"
 map = [{ from = "GoActions-1.1/addons/goactions", to = "addons/goactions" }]
@@ -104,6 +117,11 @@ map = [
 [[dependency]]
 name = "instance-dock"
 asset_id = 1421
+
+[[dependency]]
+name = "juicee"
+url = "https://github.com/Kelpekk/Juicee/releases/download/v2.0.0/juicee-2.0.0.zip"
+sha = "ad17a42433ab2b407fb1c7249bfff1bece1cc3b94de993988747e6e37955af81"
 
 [[dependency]]
 name = "gloot"
@@ -177,6 +195,10 @@ url = "https://github.com/TheWalruzz/godot-promise/releases/download/2.0.1/GdPro
 map = [{ from = "addons/promise" }]
 
 [[dependency]]
+name = "proton_scatter"
+asset_id = 1866
+
+[[dependency]]
 name = "remove_orphan_uid"
 url = "https://github.com/kenyoni-software/godot-addons/releases/download/latest/remove_orphan_uid-1_1_0.zip"
 map = [{ from = "addons/kenyoni/remove_orphan_uid" }]
@@ -193,6 +215,12 @@ map = [
 name = "spark"
 url = "https://github.com/CosmoMyzrailGorynych/spark/archive/refs/heads/main.zip"
 map = [{ from = "spark-main", to = "addons/spark" }]
+
+[[dependency]]
+name = "StaticMeshMerger"
+git = "https://github.com/EverettM12/Static-Mesh-Merger.git"
+rev = "e0de5d302d12ec16161e43bb7afac2e79f0b5aeb"
+map = [{ from = "StaticMeshMerger", to = "addons/StaticMeshMerger" }]
 
 [[dependency]]
 name = "quest_system"
@@ -250,17 +278,17 @@ map = [
     { from = "SpanningTableContainer-1.1.0/addons/spanning_table", to = "addons/spanning_table" },
 ]
 
-[[dependency]]
-name = "TweenFX"
-git = "https://github.com/EvilBunnyMan/TweenFX"
-rev = "392f24450ce6da4748a0e1340675afd6de6c3742"
-map = [{ from = "addons/TweenFX" }]
+# [[dependency]]
+# name = "TweenFX"
+# git = "https://github.com/EvilBunnyMan/TweenFX"
+# rev = "392f24450ce6da4748a0e1340675afd6de6c3742"
+# map = [{ from = "addons/TweenFX" }]
 
-[[dependency]]
-name = "TweenSuite"
-git = "https://github.com/KoBeWi/Godot-Tween-Suite"
-rev = "a60fc246ae112e46e46876ccdf663d8231e31ff3"
-map = [{ from = "addons/TweenSuite" }]
+# [[dependency]]
+# name = "TweenSuite"
+# git = "https://github.com/KoBeWi/Godot-Tween-Suite"
+# rev = "a60fc246ae112e46e46876ccdf663d8231e31ff3"
+# map = [{ from = "addons/TweenSuite" }]
 
 [[dependency]]
 name = "yard"

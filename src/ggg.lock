@@ -164,18 +164,6 @@ url = "https://github.com/peter-kish/gloot/archive/refs/tags/v3.0.2.zip"
 archive_sha = "d4d08157860abbd0ccee9fc8657ebf79fdbe1ecb10f986343a3bfea417ff6937"
 
 [[dependency]]
-name = "TweenFX"
-git = "https://github.com/EvilBunnyMan/TweenFX"
-rev = "392f24450ce6da4748a0e1340675afd6de6c3742"
-sha = "392f24450ce6da4748a0e1340675afd6de6c3742"
-
-[[dependency]]
-name = "TweenSuite"
-git = "https://github.com/KoBeWi/Godot-Tween-Suite"
-rev = "a60fc246ae112e46e46876ccdf663d8231e31ff3"
-sha = "a60fc246ae112e46e46876ccdf663d8231e31ff3"
-
-[[dependency]]
 name = "scenic"
 url = "https://github.com/flown-dev-1/Scenic/releases/download/v1.0.0/scenic_v1.0.0.zip"
 archive_sha = "c6c8b785a7ef865f5d6eaf9dbb149fc3228a7798e24bd2531227a41823e6ad29"
@@ -187,8 +175,8 @@ archive_sha = "e4eef3b3cc86db0157dcfe23ffc12a6d139b675a635d0457da32c0c90dbbcec9"
 
 [[dependency]]
 name = "csg_blockout"
-url = "https://github.com/qwqzhanqwq/Godot-CSG-Blockout/releases/download/v3.0.0/csg_blockout-3.0.0.zip"
-archive_sha = "12241fb6af07370c58d603c70b7c0e44a47616854f4ed1e347e82d79bd919d30"
+url = "https://github.com/qwqzhanqwq/Godot-CSG-Blockout/releases/download/v3.1.0/csg_blockout-3.1.0.zip"
+archive_sha = "21196345085cef84d02e6c1bbe39bcb5b7182284bc0aecd0b8f6b6fe3c58d5d0"
 
 [[dependency]]
 name = "debug_draw_3d"
@@ -200,3 +188,32 @@ name = "rich_text_3d"
 git = "https://github.com/mszylkowski/rich-text-3d-godot"
 rev = "ac618d0b3989fd9797f1ac653c2a899b2fcd0d45"
 sha = "ac618d0b3989fd9797f1ac653c2a899b2fcd0d45"
+
+[[dependency]]
+name = "gesture_recognizer"
+git = "https://github.com/Pecesitooo/Gesture-Recognizer-Godot.git"
+rev = "460d99e06e1edcd6df6e112646d2e0f94d2b4902"
+sha = "460d99e06e1edcd6df6e112646d2e0f94d2b4902"
+
+[[dependency]]
+name = "asset_placer"
+url = "https://github.com/levinzonr/godot-asset-placer/archive/refs/tags/1.6.0.zip"
+archive_sha = "a3520770a185dc23ffb0a34b57dd1e00253a6a84f2f2a64f2bba0b113247081f"
+
+[[dependency]]
+name = "juicee"
+url = "https://github.com/Kelpekk/Juicee/releases/download/v2.0.0/juicee-2.0.0.zip"
+archive_sha = "ad17a42433ab2b407fb1c7249bfff1bece1cc3b94de993988747e6e37955af81"
+
+[[dependency]]
+name = "proton_scatter"
+url = "https://github.com/HungryProton/scatter/archive/8de6ffeb56751a47ec643bfb2ae49929943bfb00.zip"
+archive_sha = "9258d1dd0fc92aa7bf4101ad27359033e9de23542b910afd4af418a883319630"
+asset_library_id = 1866
+asset_version = 12
+
+[[dependency]]
+name = "StaticMeshMerger"
+git = "https://github.com/EverettM12/Static-Mesh-Merger.git"
+rev = "e0de5d302d12ec16161e43bb7afac2e79f0b5aeb"
+sha = "e0de5d302d12ec16161e43bb7afac2e79f0b5aeb"
