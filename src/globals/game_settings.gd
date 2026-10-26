@@ -1,6 +1,6 @@
 extends Node
 
-@export var file_path: FilePath
+@export var file_path: String
 @export var defaults: Array[ConfigSection]
 @export_group("Options")
 @export var ui_group: String
@@ -10,12 +10,13 @@ var config := ConfigFile.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if not FileAccess.file_exists(file_path.as_user()):
+	Log.info("Settings initializing...")
+	if not FileAccess.file_exists(file_path):
 		for section in defaults:
 			section.apply(config)
-		config.save(file_path.as_user())
+		config.save(file_path)
 	else:
-		config.load(file_path.as_user())
+		config.load(file_path)
 
 
 func autocast_ui():
@@ -58,5 +59,5 @@ func persist_ui():
 		if node is SettingsControl:
 			node.apply(config)
 
-	config.save(file_path.as_user())
+	config.save(file_path)
 	return self
