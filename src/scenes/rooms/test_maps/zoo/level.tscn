@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bt77xn1xe5i5u"]
+
+[ext_resource type="Material" path="res://addons/csg_blockout/res/materials/mat_grid_light.tres" id="1_soleb"]
+[ext_resource type="Script" uid="uid://d2jwwk2422uj8" path="res://addons/csg_blockout/scripts/metrics/csg_player_reference_3d.gd" id="2_wg7ac"]
+
+[node name="Level" type="Node3D" unique_id=1197260100]
+
+[node name="Block" type="CSGBox3D" parent="." unique_id=1456387173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+use_collision = true
+size = Vector3(128, 1, 128)
+material = ExtResource("1_soleb")
+
+[node name="PlayerRef" type="Node3D" parent="." unique_id=1674439578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
+script = ExtResource("2_wg7ac")

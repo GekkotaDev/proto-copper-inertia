@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cwv0luciwesak"]
+
+[ext_resource type="Script" uid="uid://dpxn232fvunp8" path="res://addons/scenic/nodes/scene.gd" id="1_jcosj"]
+
+[node name="TestZoo" type="Node" unique_id=404278084]
+script = ExtResource("1_jcosj")
+metadata/_custom_type_script = "uid://dpxn232fvunp8"
