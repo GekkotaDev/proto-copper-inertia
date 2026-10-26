@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Registry" format=3 uid="uid://cj6dd1fj0x73d"]
+
+[ext_resource type="Script" uid="uid://dqtv77mng5dyh" path="res://addons/yard/registry.gd" id="1_hwrtf"]
+
+[resource]
+script = ExtResource("1_hwrtf")
+_version = 2
+_scan_rulesets = Array[Dictionary]([{
+&"allowed_file_extensions": Array[String]([]),
+&"class_restrictions": Array[StringName]([&"\"res://cases/battle/scripts/resources/mob_data.gd\""]),
+&"recursive_scan": false,
+&"scan_directories": Array[String](["res://db/encounters/entities"]),
+&"scan_regex_exclude": "",
+&"scan_regex_include": ""
+}])
