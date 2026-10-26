@@ -6,14 +6,22 @@
 
 !.env.example
 
+#? After being convinced online and consideration, these files will no longer
+#? be ignored for the following reasons
+#?
+#? - It's used to hide the usage of slop tooling from users who would otherwise
+#?   not know about .gitignore
+#? - If you're honest about not using AI, you don't need Git to ignore their
+#?   files; let irresponsible contributors get caught in flagrante.
+#? 
 #! Bloatware
-AGENTS.md
-CLAUDE.md
-CURSOR.md
-GEMINI.md
-GROK.md
-QWEN.md
-WARP.md
+# AGENTS.md
+# CLAUDE.md
+# CURSOR.md
+# GEMINI.md
+# GROK.md
+# QWEN.md
+# WARP.md
 
 #? Archives
 # It's better to unpack these files and commit the raw source because
