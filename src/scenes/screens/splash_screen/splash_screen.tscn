@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5l3of6xk214w"]
 
-[ext_resource type="Script" uid="uid://n61jlwwsarlu" path="res://scenes/screens/splash/splash_screen.gd" id="1_87lem"]
+[ext_resource type="Script" uid="uid://n61jlwwsarlu" path="res://scenes/screens/splash_screen/splash_screen.gd" id="1_87lem"]
 [ext_resource type="Script" uid="uid://dpxn232fvunp8" path="res://addons/scenic/nodes/scene.gd" id="1_tecai"]
 [ext_resource type="Texture2D" uid="uid://d4glt6s7rsjel" path="res://assets/images/textures/logos/me/logotype-alt-dark.png" id="2_u6sxw"]
 [ext_resource type="Texture2D" uid="uid://c0nr04aq2kjuf" path="res://assets/images/textures/logos/godot/reimagined-outline-vertical-light.svg" id="3_tecai"]
