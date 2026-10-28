@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://cfdc0ji0ahh3u"]
+
+[ext_resource type="Script" uid="uid://du6wcqyymqprx" path="res://scenes/screens/battles/battle_screen/battle_screen.gd" id="1_5eekl"]
+[ext_resource type="Theme" uid="uid://b4gbrahp1qqmq" path="res://assets/themes/galacticlake/clean_dark/clean_dark.tres" id="2_n5pxb"]
+[ext_resource type="Theme" uid="uid://8kbot544ig1u" path="res://assets/themes/nathanhoad/dialogue_manager/dialogue_manager.tres" id="3_3j7ei"]
+[ext_resource type="PackedScene" uid="uid://bccmrvj5b34k7" path="res://scenes/views/dialogue_balloon/balloon.tscn" id="3_5eekl"]
+
+[node name="BattleScreen" type="Node" unique_id=1474230426]
+script = ExtResource("1_5eekl")
+metadata/_custom_type_script = "uid://dpxn232fvunp8"
+
+[node name="EntitiesContainer" type="SubViewportContainer" parent="." unique_id=1217908728]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="EntitiesContainer" unique_id=1217991640]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EntitiesContainer/SubViewport" unique_id=2105790497]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="EntitiesContainer/SubViewport/HBoxContainer" unique_id=1722973945]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer" unique_id=229647859]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(320, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer/SubViewport" unique_id=918158446]
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="EntitiesContainer/SubViewport/HBoxContainer" unique_id=1910046427]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer2" unique_id=1185966263]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(320, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=566000001]
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="EntitiesContainer/SubViewport/HBoxContainer" unique_id=677077791]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer3" unique_id=2132255377]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(320, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer3/SubViewport" unique_id=172889276]
+
+[node name="UserInterfaceContainer" type="SubViewportContainer" parent="." unique_id=141333383]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_n5pxb")
+
+[node name="SubViewport" type="SubViewport" parent="UserInterfaceContainer" unique_id=1049399201]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="UserInterfaceContainer/SubViewport" unique_id=1744329955]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UserInterfaceContainer/SubViewport/Control" unique_id=801513547]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UserInterfaceContainer/SubViewport/Control/MarginContainer" unique_id=2086621829]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="UserInterfaceContainer/SubViewport/Control/MarginContainer/HBoxContainer" unique_id=569929643]
+layout_mode = 2
+text = "Health"
+
+[node name="ProgressBar" type="ProgressBar" parent="UserInterfaceContainer/SubViewport/Control/MarginContainer/HBoxContainer" unique_id=125732285]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_n5pxb")
+
+[node name="Modals" type="Control" parent="UserInterfaceContainer/SubViewport/Control" unique_id=652300295]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBalloon" parent="UserInterfaceContainer/SubViewport/Control/Modals" unique_id=38036521 instance=ExtResource("3_5eekl")]
+visible = false
+
+[node name="Control" type="Control" parent="UserInterfaceContainer/SubViewport/Control/Modals" unique_id=611693580]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_3j7ei")
+
+[node name="MarginContainer" type="MarginContainer" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=1369708536]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -219.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control/MarginContainer" unique_id=329181543]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control/MarginContainer/PanelContainer" unique_id=84143774]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ActButton" type="Button" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control/MarginContainer/PanelContainer/HBoxContainer" unique_id=1129149186]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Act"
+
+[node name="UseButton" type="Button" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control/MarginContainer/PanelContainer/HBoxContainer" unique_id=466280699]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Use"
+
+[node name="Button" type="Button" parent="UserInterfaceContainer/SubViewport/Control/Modals/Control/MarginContainer/PanelContainer/HBoxContainer" unique_id=434639868]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Flee"
