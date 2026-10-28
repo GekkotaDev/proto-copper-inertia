@@ -19,7 +19,8 @@ class_name MobData extends Resource
 # Flavor
 # - AnimationTree?
 
-@export var scene: PackedScene
+@export var battle_scene: PackedScene
+@export var field_scene: PackedScene
 
 @export_group("Data")
 @export var name: String
