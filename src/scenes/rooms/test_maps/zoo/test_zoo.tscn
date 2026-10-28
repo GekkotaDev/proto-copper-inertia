@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://cwv0luciwesak"]
 
 [ext_resource type="Script" uid="uid://dpxn232fvunp8" path="res://addons/scenic/nodes/scene.gd" id="1_jcosj"]
+[ext_resource type="PackedScene" uid="uid://bt77xn1xe5i5u" path="res://scenes/rooms/test_maps/zoo/level.tscn" id="2_p74sl"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_nup64"]
+vertices = PackedVector3Array(-63.5, 1.5, -63.5, -63.5, 1.5, 63.5, 63.5, 1.5, 63.5, 63.5, 1.5, -63.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [node name="TestZoo" type="Node" unique_id=404278084]
 script = ExtResource("1_jcosj")
 metadata/_custom_type_script = "uid://dpxn232fvunp8"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=174575981]
+navigation_mesh = SubResource("NavigationMesh_nup64")
+
+[node name="Level" parent="NavigationRegion3D" unique_id=1197260100 instance=ExtResource("2_p74sl")]
