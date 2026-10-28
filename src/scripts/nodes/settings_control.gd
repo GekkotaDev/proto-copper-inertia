@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/cog.svg")
 class_name SettingsControl extends Node
 
 @export_group("Settings")
@@ -18,11 +19,7 @@ func _ready() -> void:
 
 
 func apply(config: ConfigFile):
-	config.set_value(
-		settings_section,
-		settings_key,
-		settings_value,
-	)
+	config.set_value(settings_section, settings_key, settings_value)
 
 
 func hydrate(config: ConfigFile):
