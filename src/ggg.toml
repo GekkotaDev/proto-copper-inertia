@@ -190,6 +190,13 @@ map = [
 ]
 
 [[dependency]]
+name = "phantom_camera"
+url = "https://github.com/ramokz/phantom-camera/archive/refs/tags/v0.11.0.3.zip"
+map = [
+    { from = "phantom-camera-0.11.0.3/addons/phantom_camera", to = "addons/phantom_camera" },
+]
+
+[[dependency]]
 name = "promise"
 url = "https://github.com/TheWalruzz/godot-promise/releases/download/2.0.1/GdPromise-2.0.1.zip"
 map = [{ from = "addons/promise" }]
@@ -234,6 +241,11 @@ name = "quick_layout_changer"
 git = "https://github.com/mathrick/godot-quick-layout-changer.git"
 rev = "be6cd9fd9865a27528541e383f6d3254e2e77d64"
 map = [{ from = "addons/quick_layout_changer" }]
+
+[[dependency]]
+name = "quill-ide"
+url = "https://github.com/RykoTheDev/Quill-IDE/releases/download/v3.0/Quill-IDE-3.0.zip"
+sha = "368a94536d9152f2c50b70e6f968c618816129f3bf81f1058830cd899d8a9876"
 
 [[dependency]]
 name = "rich_text_3d"
