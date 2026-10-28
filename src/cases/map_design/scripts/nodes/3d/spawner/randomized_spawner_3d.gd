@@ -1,3 +1,5 @@
+@icon("res://addons/at-icons/node3d/factory.svg")
+
 @tool
 class_name RandomizedSpawner3D extends Spawner3D
 

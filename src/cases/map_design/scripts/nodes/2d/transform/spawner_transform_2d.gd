@@ -1,3 +1,5 @@
+@icon("res://addons/at-icons/node2d/arrow_axes.svg")
+
 @abstract
 class_name SpawnerTransform2D extends Node
 

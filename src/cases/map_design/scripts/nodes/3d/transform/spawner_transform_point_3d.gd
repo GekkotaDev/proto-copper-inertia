@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node3d/arrow_axes.svg")
 class_name SpawnerTransformPoint3D extends SpawnerTransform3D
 
 @export_group("Point Options")

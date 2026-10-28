@@ -1,3 +1,5 @@
+@icon("res://addons/at-icons/node3d/factory.svg")
+
 @abstract
 @tool
 class_name Spawner3D extends Marker3D

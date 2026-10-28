@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node3d/arrow_axes.svg")
 class_name SpawnerTransformArea3D extends SpawnerTransform3D
 
 @export_group("Area Options")
