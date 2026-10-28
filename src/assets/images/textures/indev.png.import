@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bma5q7y6ooyw"
-valid=false
+path="res://.godot/imported/indev.png-e85e16e22665f68613abfff8bc9e0052.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/images/textures/indev.png"
+dest_files=["res://.godot/imported/indev.png-e85e16e22665f68613abfff8bc9e0052.ctex"]
 
 [params]
 

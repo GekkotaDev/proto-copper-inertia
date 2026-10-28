@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fm1vm4b3wcd0"
-valid=false
+path="res://.godot/imported/logo-alt-dark.png-f659d3132272fc39ae965383d3c7b5ac.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/images/textures/logos/me/logo-alt-dark.png"
+dest_files=["res://.godot/imported/logo-alt-dark.png-f659d3132272fc39ae965383d3c7b5ac.ctex"]
 
 [params]
 
