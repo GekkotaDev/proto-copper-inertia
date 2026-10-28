@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node/node_graph_root.svg")
 class_name NodeComposer extends Node
 
 @export var nodes: Dictionary[StringName, Node]
