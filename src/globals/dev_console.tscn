@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cvj5sigf872l4"]
+
+[ext_resource type="Script" uid="uid://clhssu262ixii" path="res://globals/dev_console.gd" id="1_u417v"]
+[ext_resource type="Script" uid="uid://b8spyapyj8nud" path="res://scripts/tasks/console/smoke.gd" id="2_515di"]
+[ext_resource type="Script" uid="uid://dphcnf6x6y5ex" path="res://scripts/tasks/console/debug.gd" id="3_7iulr"]
+[ext_resource type="Script" uid="uid://yttpkri4ttxe" path="res://scripts/tasks/console/debug/throw.gd" id="4_ei4k5"]
+[ext_resource type="Script" uid="uid://cl4ol4o3l2gwv" path="res://scripts/tasks/console/debug/continue.gd" id="5_ilxxg"]
+
+[node name="DevConsole" type="Node" unique_id=1557844412]
+script = ExtResource("1_u417v")
+
+[node name="Smoke" type="Node" parent="." unique_id=1546289693]
+script = ExtResource("2_515di")
+
+[node name="Debug" type="Node" parent="." unique_id=1724458462]
+script = ExtResource("3_7iulr")
+
+[node name="Throw" type="Node" parent="Debug" unique_id=1198447395]
+script = ExtResource("4_ei4k5")
+
+[node name="Continue" type="Node" parent="Debug" unique_id=568672030]
+script = ExtResource("5_ilxxg")

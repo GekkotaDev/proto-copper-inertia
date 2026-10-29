@@ -49,11 +49,6 @@ url = "https://github.com/jelolul/milestone/archive/refs/tags/v1.1.1.beta.zip"
 archive_sha = "e6f6430119c2549dce7fdc7ab72bb8dabd64a50818482fc2d4e37e790def23cc"
 
 [[dependency]]
-name = "panku_console"
-url = "https://github.com/Ark2000/PankuConsole/archive/refs/tags/v1.7.9.zip"
-archive_sha = "cd6f7e0814fd3368c40e17f388ec20292fc25a3f0cd7ca483e212f40d0d9da2c"
-
-[[dependency]]
 name = "promise"
 url = "https://github.com/TheWalruzz/godot-promise/releases/download/2.0.1/GdPromise-2.0.1.zip"
 archive_sha = "1298e642790158d8b03c05fe21faf16b49f91cb527230a662a9c9db63a359ad3"
@@ -222,3 +217,13 @@ sha = "e0de5d302d12ec16161e43bb7afac2e79f0b5aeb"
 name = "quill-ide"
 url = "https://github.com/RykoTheDev/Quill-IDE/releases/download/v3.0/Quill-IDE-3.0.zip"
 archive_sha = "368a94536d9152f2c50b70e6f968c618816129f3bf81f1058830cd899d8a9876"
+
+[[dependency]]
+name = "limbo_console"
+url = "https://github.com/limbonaut/limbo_console/releases/download/v0.8.0/limbo_console_v0.8.0.zip"
+archive_sha = "68cee989910322561222fde3261871a7bd0878122147a949bbb7a27fabef8d9a"
+
+[[dependency]]
+name = "phantom_camera"
+url = "https://github.com/ramokz/phantom-camera/archive/refs/tags/v0.11.0.3.zip"
+archive_sha = "42b4bbd7ce6efa726abc6e927328d349887c9343fe53900a5083860c1848749b"

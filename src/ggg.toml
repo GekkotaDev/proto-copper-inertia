@@ -150,6 +150,11 @@ map = [
 ]
 
 [[dependency]]
+name = "limbo_console"
+url = "https://github.com/limbonaut/limbo_console/releases/download/v0.8.0/limbo_console_v0.8.0.zip"
+sha = "68cee989910322561222fde3261871a7bd0878122147a949bbb7a27fabef8d9a"
+
+[[dependency]]
 name = "log"
 url = "https://github.com/russmatney/log.gd/archive/refs/tags/v0.2.2.zip"
 map = [
@@ -182,12 +187,12 @@ map = [
 #     { from = "netfox.noray.v1.35.3/addons/netfox.noray", to = "addons/netfox.noray" },
 # ]
 
-[[dependency]]
-name = "panku_console"
-url = "https://github.com/Ark2000/PankuConsole/archive/refs/tags/v1.7.9.zip"
-map = [
-    { from = "PankuConsole-1.7.9/addons/panku_console", to = "addons/panku_console" },
-]
+# [[dependency]]
+# name = "panku_console"
+# url = "https://github.com/Ark2000/PankuConsole/archive/refs/tags/v1.7.9.zip"
+# map = [
+#     { from = "PankuConsole-1.7.9/addons/panku_console", to = "addons/panku_console" },
+# ]
 
 [[dependency]]
 name = "phantom_camera"

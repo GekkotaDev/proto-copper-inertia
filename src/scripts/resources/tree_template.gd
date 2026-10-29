@@ -1,6 +1,6 @@
 class_name TreeTemplate extends Resource
 
-var children: Dictionary[String, Node]
+var templates: Dictionary[String, Node]
 var scope: Node
 
 
@@ -13,25 +13,48 @@ func _init(root: Node) -> void:
 
 
 func add_child(name: String, node: Node) -> TreeTemplate:
-	children[name] = node
+	templates[name] = node
 	return self
 
 
 func add_children(map: Dictionary[String, Node]) -> TreeTemplate:
 	for name in map:
-		children[name] = map[name]
+		templates[name] = map[name]
 	return self
 
 
-func populate_slots():
-	var slots: Array[TreeSlot] = scope.find_children("*", "TreeSlot").map(
-		func(node: Node):
-			return node is TreeSlot,
-	)
+func populate_slot():
+	var slots: Array[TreeSlot] = []
+
+	for slot in scope.find_children("*", "TreeSlot"):
+		if slot is TreeSlot:
+			slots.append(slot)
+		if slot is TreeSlot2D:
+			slots.append(slot)
+		if slot is TreeSlot3D:
+			slots.append(slot)
 
 	for slot in slots:
-		if not children.has(slot.key):
+		if templates.has(slot.key):
+			slot.replace_by(templates[slot.key])
+			slot.queue_free()
+			break
+
+
+func populate_slots():
+	var slots: Array[TreeSlot] = []
+
+	for slot in scope.find_children("*", "TreeSlot"):
+		if slot is TreeSlot:
+			slots.append(slot)
+		if slot is TreeSlot2D:
+			slots.append(slot)
+		if slot is TreeSlot3D:
+			slots.append(slot)
+
+	for slot in slots:
+		if not templates.has(slot.key):
 			continue
 
-		slot.replace_by(children[slot.key])
+		slot.replace_by(templates[slot.key])
 		slot.queue_free()

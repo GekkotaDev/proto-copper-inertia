@@ -12,3 +12,7 @@ class Of:
 static func _static_init() -> void:
 	if Engine.is_editor_hint():
 		WCSafeResourceFormatSettings.allow()
+
+
+static func load():
+	pass
