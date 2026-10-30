@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://cfdc0ji0ahh3u"]
 
 [ext_resource type="Script" uid="uid://du6wcqyymqprx" path="res://scenes/screens/battles/battle_screen/battle_screen.gd" id="1_5eekl"]
+[ext_resource type="Script" uid="uid://bs0ma3rctmeqx" path="res://scripts/nodes/slots/tree_slot_3d.gd" id="2_ld4jh"]
 [ext_resource type="Theme" uid="uid://b4gbrahp1qqmq" path="res://assets/themes/galacticlake/clean_dark/clean_dark.tres" id="2_n5pxb"]
+[ext_resource type="Script" uid="uid://dxls88pgbp5q1" path="res://scripts/resources/tree_template.gd" id="2_p6d5f"]
 [ext_resource type="Theme" uid="uid://8kbot544ig1u" path="res://assets/themes/nathanhoad/dialogue_manager/dialogue_manager.tres" id="3_3j7ei"]
 [ext_resource type="PackedScene" uid="uid://bccmrvj5b34k7" path="res://scenes/views/dialogue_balloon/balloon.tscn" id="3_5eekl"]
+[ext_resource type="Script" uid="uid://cmgx5y1ckojyx" path="res://scripts/nodes/slots/tree_slot.gd" id="4_0xdhh"]
+
+[sub_resource type="Resource" id="Resource_uyk0o"]
+script = ExtResource("2_p6d5f")
+metadata/_custom_type_script = "uid://dxls88pgbp5q1"
 
 [node name="BattleScreen" type="Node" unique_id=1474230426]
 script = ExtResource("1_5eekl")
+template = SubResource("Resource_uyk0o")
 metadata/_custom_type_script = "uid://dpxn232fvunp8"
 
 [node name="EntitiesContainer" type="SubViewportContainer" parent="." unique_id=1217908728]
@@ -41,7 +49,11 @@ handle_input_locally = false
 size = Vector2i(320, 648)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer/SubViewport" unique_id=918158446]
+[node name="TreeSlot3D" type="Marker3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1026685545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+script = ExtResource("2_ld4jh")
+key = &"mob"
+metadata/_custom_type_script = "uid://bs0ma3rctmeqx"
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="EntitiesContainer/SubViewport/HBoxContainer" unique_id=1910046427]
 layout_mode = 2
@@ -52,7 +64,10 @@ handle_input_locally = false
 size = Vector2i(320, 648)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=566000001]
+[node name="TreeSlot3D" type="Marker3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=2006578311]
+script = ExtResource("2_ld4jh")
+key = &"mob"
+metadata/_custom_type_script = "uid://bs0ma3rctmeqx"
 
 [node name="SubViewportContainer3" type="SubViewportContainer" parent="EntitiesContainer/SubViewport/HBoxContainer" unique_id=677077791]
 layout_mode = 2
@@ -63,7 +78,16 @@ handle_input_locally = false
 size = Vector2i(320, 648)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer3/SubViewport" unique_id=172889276]
+[node name="TreeSlot3D" type="Marker3D" parent="EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer3/SubViewport" unique_id=1602708110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+script = ExtResource("2_ld4jh")
+key = &"mob"
+metadata/_custom_type_script = "uid://bs0ma3rctmeqx"
+
+[node name="TreeSlot" type="Node" parent="EntitiesContainer/SubViewport" unique_id=2126694714]
+script = ExtResource("4_0xdhh")
+key = &"background"
+metadata/_custom_type_script = "uid://cmgx5y1ckojyx"
 
 [node name="UserInterfaceContainer" type="SubViewportContainer" parent="." unique_id=141333383]
 anchors_preset = 15

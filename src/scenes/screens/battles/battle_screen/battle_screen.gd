@@ -1,5 +1,7 @@
 class_name BattleScene extends Scene
 
+# @export_category("")
+@export var template := TreeTemplate.new()
 @export var opponents: Array[MobData] = []
 
 
@@ -20,9 +22,11 @@ func _start(data: Variant):
 		opponents = data.get("opponents", [])
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	template.bind(self)
+
+	for index in range(3):
+		template.add_child(&"mob", opponents[index].battle_scene.instantiate())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
