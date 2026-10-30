@@ -5,11 +5,12 @@ var scope: Node
 
 
 static func of(root: Node) -> TreeTemplate:
-	return TreeTemplate.new(root)
+	return TreeTemplate.new().bind(root)
 
 
-func _init(root: Node) -> void:
+func bind(root: Node) -> TreeTemplate:
 	scope = root
+	return self
 
 
 func add_child(name: String, node: Node) -> TreeTemplate:
