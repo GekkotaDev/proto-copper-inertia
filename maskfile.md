@@ -12,35 +12,27 @@ used and that they exist in the first place.
 
 ```nu
 mise i
-pnpm i
-uv sync
+mise exec -- pnpm i
+mise exec -- uv sync
 
 cd src
 
-ggg sync
+mise exec -- ggg sync
 ```
 
-## commit
+```pwsh
+mise i
+mise exec -- pnpm i
+mise exec -- uv sync
 
-> Create a commit following the Conventional Commits specification
+cd src
 
-```nu
-$env.HUSKY = 1
-
-let isWindows = (sys host).name | str downcase | $in == "windows"
-
-if ($isWindows) {
-    print "Dry run only on Windows";
-    pnpm better-commits --dry-run
-} else {
-    pnpm better-commits
-}
-
+mise exec -- ggg sync
 ```
 
 ## dev
 
 ```nu
 cd src
-ggg edit
+mise exec -- ggg edit
 ```

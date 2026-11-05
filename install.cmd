@@ -105,6 +105,8 @@ mise activate pwsh > .\.env\scripts\activate.ps1
 mise activate zsh > .\.env\scripts\activate.sh
 mise activate bash > .\.env\scripts\activate
 mise i
+mise exec -- mask sync
+mise exec -- mask dev
 exit /b %ERRORLEVEL%
 
 :fail_download

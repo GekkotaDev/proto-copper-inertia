@@ -69,6 +69,8 @@
 
 ## Additional Notes
 
-> I'm gonna take a breather
+> i need a breather and hope for the downfall of the Generative AI industry.
+>
+> pls read the codebase.
 >
 > — [`@gekkotadev`](https://github.com/GekkotaDev)
