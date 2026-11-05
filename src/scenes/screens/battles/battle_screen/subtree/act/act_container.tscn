@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dnlp38obwt4pb"]
+
+[ext_resource type="Theme" uid="uid://8kbot544ig1u" path="res://assets/themes/nathanhoad/dialogue_manager/dialogue_manager.tres" id="1_noka7"]
+[ext_resource type="Script" uid="uid://c38k1f03bhxxq" path="res://scenes/screens/battles/battle_screen/subtree/act/act_container.gd" id="2_gcuh7"]
+
+[node name="ActContainer" type="PanelContainer" unique_id=1261441984 node_paths=PackedStringArray("root")]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -54.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_noka7")
+script = ExtResource("2_gcuh7")
+root = NodePath("MarginContainer/GridContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=872342200]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=239487109]
+layout_mode = 2
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 32
+columns = 2
+
+[node name="Button1" type="Button" parent="MarginContainer/GridContainer" unique_id=1607681511]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="MarginContainer/GridContainer" unique_id=1087316296]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="MarginContainer/GridContainer" unique_id=818508705]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="MarginContainer/GridContainer" unique_id=1023219768]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Viola"

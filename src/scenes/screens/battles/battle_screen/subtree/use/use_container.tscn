@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bguf88sca6oqt"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=389024196]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1028174772]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=531751608]
+layout_mode = 2

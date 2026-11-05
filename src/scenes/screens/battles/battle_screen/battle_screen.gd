@@ -1,34 +1,24 @@
 class_name BattleScene extends Scene
 
+const Model = preload("uid://x3cej701i1ny")
+
+@export var model := preload("res://scenes/screens/battles/battle_screen/model.tres")
+
 # @export_category("")
+@export var dialogue: DialogueResource
 @export var template := TreeTemplate.new()
 @export var opponents: Array[MobData] = []
 
 
 func _start(data: Variant):
-	assert(
-		DictionaryTools
-		.Validate
-		.parse(
-			data,
-			{
-				opponents = func(nodes: Variant):
-					return nodes is Array[MobData], #
-			},
-		)
-	)
-
-	if data is Dictionary[String, Variant]:
-		opponents = data.get("opponents", [])
+	model.mobs = data.get(&"mobs")
 
 
 func _ready() -> void:
-	template.bind(self)
-
+	Log.info(opponents.size())
 	for index in range(3):
+		if index > opponents.size() - 1:
+			break
 		template.add_child(&"mob", opponents[index].battle_scene.instantiate())
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	DialogueManager.show_dialogue_balloon(dialogue)

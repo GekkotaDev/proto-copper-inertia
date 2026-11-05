@@ -15,8 +15,8 @@ archive_sha = "2a3ff055adde209acf32f819b66d06a364e7d258e3da76e134f1ae3b69b65b6c"
 
 [[dependency]]
 name = "dialogue_manager"
-url = "https://github.com/nathanhoad/godot_dialogue_manager/archive/refs/tags/v4.0.3.zip"
-archive_sha = "2ed1123fe511d71f9e68ce1bbe398954f3a6366796383bde589accb17ce6a230"
+url = "https://github.com/nathanhoad/godot_dialogue_manager/archive/refs/tags/v4.2.0.zip"
+archive_sha = "de456557a3d231f124c9b387a571e55ce2f8b390c8ae31a7b2681236874aa85a"
 
 [[dependency]]
 name = "expose_them_properties"
@@ -113,7 +113,7 @@ archive_sha = "5f4674b9de97b471c23185c554f077b1229de14103274479a21b076d6cea49b7"
 name = "wcsaferesourceformat"
 url = "https://gitlab.com/worstconcept/wcsaferesourceformat/-/archive/12b2e0c72d7604db40d47c89b29d02b90ebb2d63.zip"
 archive_sha = "7b887738552d60e593b1a41a1481118b4e12aec1f7ebd205d76a3f9a71c545a8"
-asset_id = 4718
+asset_library_id = 4718
 asset_version = 5
 
 [[dependency]]
@@ -130,7 +130,7 @@ archive_sha = "8cd188e837f845ca941d0a52226759ffcae4207626458a9343ceb8eb6c4b26f9"
 name = "instance-dock"
 url = "https://github.com/KoBeWi/Godot-Instance-Dock/archive/9e7f9664f8a020c0b31220901c06a49012135f40.zip"
 archive_sha = "98140cda5971c6d9706d647a8dacfc6274528d0f2ff9088620e1c63a89260d71"
-asset_id = 1421
+asset_library_id = 1421
 asset_version = 10
 
 [[dependency]]
@@ -160,8 +160,8 @@ archive_sha = "d4d08157860abbd0ccee9fc8657ebf79fdbe1ecb10f986343a3bfea417ff6937"
 
 [[dependency]]
 name = "scenic"
-url = "https://github.com/flown-dev-1/Scenic/releases/download/v1.0.0/scenic_v1.0.0.zip"
-archive_sha = "c6c8b785a7ef865f5d6eaf9dbb149fc3228a7798e24bd2531227a41823e6ad29"
+url = "https://github.com/flown-dev-1/Scenic/releases/download/v2.0.0/scenic_v2.0.0.zip"
+archive_sha = "911a98aa230c5dd930b142cea79c1e4fecb1e59addd3638008a94b07259daddc"
 
 [[dependency]]
 name = "goactions"
@@ -204,7 +204,7 @@ archive_sha = "ad17a42433ab2b407fb1c7249bfff1bece1cc3b94de993988747e6e37955af81"
 name = "proton_scatter"
 url = "https://github.com/HungryProton/scatter/archive/8de6ffeb56751a47ec643bfb2ae49929943bfb00.zip"
 archive_sha = "9258d1dd0fc92aa7bf4101ad27359033e9de23542b910afd4af418a883319630"
-asset_id = 1866
+asset_library_id = 1866
 asset_version = 12
 
 [[dependency]]
@@ -227,3 +227,8 @@ archive_sha = "68cee989910322561222fde3261871a7bd0878122147a949bbb7a27fabef8d9a"
 name = "phantom_camera"
 url = "https://github.com/ramokz/phantom-camera/archive/refs/tags/v0.11.0.3.zip"
 archive_sha = "42b4bbd7ce6efa726abc6e927328d349887c9343fe53900a5083860c1848749b"
+
+[[dependency]]
+name = "orchestrator"
+url = "https://github.com/CraterCrash/godot-orchestrator/releases/download/v2.5.stable/godot-orchestrator-v2.5-stable-plugin.zip"
+archive_sha = "3e4bab7811b89002627495973e1aa0fdf502bb8cec718a2693cce354d203efd7"

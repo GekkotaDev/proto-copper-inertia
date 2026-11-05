@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://bkgha0p5rc28l"]
+
+[ext_resource type="Script" uid="uid://drw8idygvi0ce" path="res://cases/battle/scripts/resources/mob_data.gd" id="1_tuw1j"]
+[ext_resource type="Script" uid="uid://x3cej701i1ny" path="res://scenes/screens/battles/battle_screen/model.gd" id="2_mindd"]
+
+[resource]
+script = ExtResource("2_mindd")

@@ -12,8 +12,8 @@ config_version=5
 
 instance_dock/scene_data_file="res://InstanceDockSceneData.txt"
 instance_dock/preview_resolution=Vector2i(64, 64)
-wc_safe_resource_format/allowed_classes=Array[String](["Resource"])
-wc_safe_resource_format/allowed_scripts=Array[String](["res://scripts/resources/settings.gd", "res://scripts/resources/save/save_resource.gd"])
+wc_safe_resource_format/allowed_classes=Array[String](["Resource", "RefCounted"])
+wc_safe_resource_format/allowed_scripts=Array[String](["res://scripts/resources/settings.gd", "res://scripts/resources/save/save_resource.gd", "res://addons/worstconcept-saferesourceformat/settings.gd", "res://save/data/player.gd", "res://save/slot.gd", "res://addons/lib.unsave/resources/unsave_slot.gd", "res://save/data/snapshot.gd"])
 
 [application]
 
@@ -23,18 +23,13 @@ config/features=PackedStringArray("4.7")
 
 [autoload]
 
-BeehaveGlobalMetrics="*uid://c3ktl6ontsdt7"
-BeehaveGlobalDebugger="*uid://bl3ma400hpvsh"
 ControllerIcons="*uid://nactvntfwxwx"
 DebugMenu="*uid://cggqb75a8w8r"
-Panku="*uid://cyftuo4syatlv"
 GlobalSceneManager="*uid://dwycp85sl04s"
 Shaker="*uid://cc0l024sa7ef0"
 SignalLens="*uid://85rkx60vm7a7"
 SoundManager="*uid://c28kxiyiohewv"
 QuestSystem="*uid://b77kvbliweux5"
-TweenFX="*uid://d2n10rw2dnx8o"
-DialogueManager="*uid://c3rodes2l3gxb"
 AchievementManager="*uid://dj1bkxbqna8jt"
 GUIDE="*uid://p2jwrgjcbexr"
 MultiSceneManager="*uid://bgc2ku4o180lj"
@@ -44,6 +39,8 @@ Juicee="*uid://b36fwfvmmv0xc"
 LimboConsole="*uid://dyxornv8vwibg"
 PhantomCameraManager="*uid://duq6jhf6unyis"
 Console="*uid://cvj5sigf872l4"
+SceneLoader="*uid://edkfplkj2dgu"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [debug_draw_3d]
 
@@ -55,7 +52,7 @@ runtime/balloon_path="res://scenes/views/dialogue_balloon/balloon.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/StaticMeshMerger/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/asset_placer/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gesture_recognizer/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/juicee/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/quill-ide/plugin.cfg", "res://addons/rich_text_3d/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
+enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/StaticMeshMerger/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/asset_placer/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gesture_recognizer/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/juicee/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/lib.unsave/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/quill-ide/plugin.cfg", "res://addons/rich_text_3d/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
 
 [file_customization]
 

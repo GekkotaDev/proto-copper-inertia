@@ -19,6 +19,9 @@ class_name MobData extends Resource
 # Flavor
 # - AnimationTree?
 
+@export var rid := get_rid()
+
+@export_group("Scenes")
 @export var battle_scene: PackedScene
 @export var field_scene: PackedScene
 

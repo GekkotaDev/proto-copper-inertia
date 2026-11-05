@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://jba8oy3v16ei"]
+
+[ext_resource type="Script" uid="uid://bl07n0bp2yuho" path="res://globals/save_system.gd" id="1_v1h86"]
+
+[node name="SaveSystem" type="Node" unique_id=1587831979]
+script = ExtResource("1_v1h86")
+base_path = "saves"
+extension = "wcsb"
