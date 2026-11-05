@@ -14,7 +14,7 @@
 > [!NOTE]
 > **Where's the addons?**
 >
-> Here's the [Google Drive link]()
+> Here's the [Google Drive link](https://drive.google.com/file/d/1wIhywSHCQl5eCS_TsuuLILYyKRa3027S/view?usp=sharing)
 >
 > I've sent the password on FB Messenger.
 
