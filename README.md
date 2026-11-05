@@ -31,7 +31,9 @@
 >
 > The enemy AI has to plan first before running their move, and in the code for the enemy or player to know when to make their next move we await a signal within the combat loop while the behavior tree of each individual enemy emits the necessary signal for it to be awaited.
 >
-> All that planning and crap code's already implemented, just make the unique behavior tree for a given enemy.
+> [That's the shit where LimboAI is invovled](https://github.com/limbonaut/limboai)
+>
+> All that planning and crap code's already implemented, just make the unique behavior tree for a given enemy. You can define attacks to associate with a drawing and etc. using [YARD](https://github.com/elliotfontaine/yard-godot) and query it in the behavior tree.
 
 ---
 
@@ -50,6 +52,8 @@
 > Spreading props without doing it manually can be done with something like [Proton Scatter](https://store.godotengine.org/asset/hungryproton/protonscatter) or your preferred choice of alternative.
 >
 > For adding interactivity into the scene, it should be simplified with the `GoAction` nodes with [Area3D](https://docs.godotengine.org/en/stable/classes/class_area3d.html) for anything involving the player being within the proximity of an object.
+>
+> **I advice you start [greyboxing](https://jackw-gamedesign.tumblr.com/post/139960850160/what-is-greyboxing) first before making it look pretty**.
 
 ---
 
