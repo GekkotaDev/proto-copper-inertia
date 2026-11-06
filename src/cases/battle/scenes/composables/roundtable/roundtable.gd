@@ -1,4 +1,5 @@
 # ! ! !   R E A D   N O T E S   ! ! !
+@icon("res://addons/at-icons/node/arrows_clockwise.svg")
 class_name TurnBasedRotation extends Node3D
 
 signal on_victory

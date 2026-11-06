@@ -1,6 +1,6 @@
 @abstract
-class_name MobEffect
+class_name MobEffect extends Resource
 
 
 @abstract
-func inflict(mob: MobData) -> Error
+func inflict(mob: MobData) -> int

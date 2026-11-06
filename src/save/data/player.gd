@@ -6,6 +6,7 @@
 @tool
 extends Resource
 
+@export var mob_id: StringName = &"player"
 @export var inventory: Dictionary
 
 @export_group("Stats")

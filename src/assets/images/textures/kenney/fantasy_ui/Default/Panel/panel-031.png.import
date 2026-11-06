@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhi6l02idqupw"
-path="res://.godot/imported/panel-031.png-8d9a08f3bd8ec4614eb2f064d447976d.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Default/Panel/panel-031.png"
-dest_files=["res://.godot/imported/panel-031.png-8d9a08f3bd8ec4614eb2f064d447976d.ctex"]
 
 [params]
 

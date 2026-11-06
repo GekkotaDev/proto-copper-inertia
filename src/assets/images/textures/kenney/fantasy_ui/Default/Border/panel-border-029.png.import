@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwoa6un5fkv0s"
-path="res://.godot/imported/panel-border-029.png-9a2ce6f5ffc4cd1dee3ca2a584ebbeb5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Default/Border/panel-border-029.png"
-dest_files=["res://.godot/imported/panel-border-029.png-9a2ce6f5ffc4cd1dee3ca2a584ebbeb5.ctex"]
 
 [params]
 

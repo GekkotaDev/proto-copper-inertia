@@ -1,61 +1,18 @@
-class_name TreeTemplate extends Resource
+@icon("res://addons/at-icons/node/forest.svg")
+class_name TreeTemplate extends Node
 
-var templates: Dictionary[String, Node]
-var scope: Node
-
-
-static func of(root: Node) -> TreeTemplate:
-	return TreeTemplate.new().bind(root)
+@export var scope: Node
+@export var slots: Dictionary[StringName, Node] = { }
 
 
-func bind(root: Node) -> TreeTemplate:
-	scope = root
-	return self
+func _ready() -> void:
+	scope = scope if scope else get_parent()
 
 
-func add_child(name: String, node: Node) -> TreeTemplate:
-	templates[name] = node
-	return self
+func populate(node: Node, slot: StringName):
+	slots[slot].replace_by(node)
 
 
-func add_children(map: Dictionary[String, Node]) -> TreeTemplate:
-	for name in map:
-		templates[name] = map[name]
-	return self
-
-
-func populate_slot():
-	var slots: Array[TreeSlot] = []
-
-	for slot in scope.find_children("*", "TreeSlot"):
-		if slot is TreeSlot:
-			slots.append(slot)
-		if slot is TreeSlot2D:
-			slots.append(slot)
-		if slot is TreeSlot3D:
-			slots.append(slot)
-
-	for slot in slots:
-		if templates.has(slot.key):
-			slot.replace_by(templates[slot.key])
-			slot.queue_free()
-			break
-
-
-func populate_slots():
-	var slots: Array[TreeSlot] = []
-
-	for slot in scope.find_children("*", "TreeSlot"):
-		if slot is TreeSlot:
-			slots.append(slot)
-		if slot is TreeSlot2D:
-			slots.append(slot)
-		if slot is TreeSlot3D:
-			slots.append(slot)
-
-	for slot in slots:
-		if not templates.has(slot.key):
-			continue
-
-		slot.replace_by(templates[slot.key])
-		slot.queue_free()
+func auto_populate(nodes: Array[Node]):
+	for slot in slots.values() as Array[Node]:
+		slot.replace_by(nodes.pop_front())

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnqll4g8c2v2k"
-path="res://.godot/imported/panel-transparent-border-030.png-3a3d70d30c3e8e0fc796a28121eacf66.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Double/Transparent border/panel-transparent-border-030.png"
-dest_files=["res://.godot/imported/panel-transparent-border-030.png-3a3d70d30c3e8e0fc796a28121eacf66.ctex"]
 
 [params]
 

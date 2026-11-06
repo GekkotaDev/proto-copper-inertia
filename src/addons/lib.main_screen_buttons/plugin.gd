@@ -5,7 +5,7 @@ var main_screen_buttons: Array[Node] = []
 var labels: Dictionary[String, String] = { }
 
 
-func _enter_tree() -> void:
+func _plugin():
 	var editor_base_control := EditorInterface.get_base_control()
 	var editor_head = editor_base_control.get_child(0).get_child(0)
 	var main_screen_container = editor_head.get_child(2)
@@ -29,7 +29,7 @@ func _enter_tree() -> void:
 				node.text = "",
 	)
 	timer.one_shot = true
-	timer.start(1.0 / 60)
+	timer.start(1.0 / 30)
 
 	main_screen_changed.connect(
 		func(_0: String):
@@ -45,6 +45,10 @@ func _enter_tree() -> void:
 				labels[node.name] = node.text
 				node.text = "",
 	)
+
+
+func _enter_tree() -> void:
+	call_deferred("_plugin")
 
 
 func _exit_tree() -> void:

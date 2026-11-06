@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b3h4snn50crbl"
+path="res://.godot/imported/dialogue.dialogue-37ca6d2770b1780746f2254f3b3fd2e8.tres"
+
+[deps]
+
+source_file="res://scenes/screens/battles/battle_screen/dialogue.dialogue"
+dest_files=["res://.godot/imported/dialogue.dialogue-37ca6d2770b1780746f2254f3b3fd2e8.tres"]
+
+[params]
+
+defaults=true

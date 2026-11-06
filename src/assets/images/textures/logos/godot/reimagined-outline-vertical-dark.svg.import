@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clv5udme7jsln"
-path="res://.godot/imported/reimagined-outline-vertical-dark.svg-5c0fc4fcc1ac631e654b0b014f0d634e.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/logos/godot/reimagined-outline-vertical-dark.svg"
-dest_files=["res://.godot/imported/reimagined-outline-vertical-dark.svg-5c0fc4fcc1ac631e654b0b014f0d634e.ctex"]
 
 [params]
 

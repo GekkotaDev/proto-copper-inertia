@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4nm2me7pn32i"
-path="res://.godot/imported/divider-fade-004.png-d3eea3e65b10512cb2d0f1d6c30329df.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Double/Divider Fade/divider-fade-004.png"
-dest_files=["res://.godot/imported/divider-fade-004.png-d3eea3e65b10512cb2d0f1d6c30329df.ctex"]
 
 [params]
 

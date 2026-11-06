@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blrqsd0uji7fg"
-path="res://.godot/imported/logo-alt-light.png-bfa588a4c9df2140a40774a47282f196.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/logos/me/logo-alt-light.png"
-dest_files=["res://.godot/imported/logo-alt-light.png-bfa588a4c9df2140a40774a47282f196.ctex"]
 
 [params]
 

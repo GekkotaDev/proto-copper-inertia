@@ -89,6 +89,10 @@ limbo_console_search_history={
 ]
 }
 
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://scenes/screens/battles/battle_screen/dialogue.dialogue")
+
 [limbo_ai]
 
 behavior_tree/behavior_tree_default_dir="res://db/ai/trees"

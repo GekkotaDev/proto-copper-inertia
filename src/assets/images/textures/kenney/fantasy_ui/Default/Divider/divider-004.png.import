@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2j3oprlodkwe"
-path="res://.godot/imported/divider-004.png-39c5f5b6a8952d7951d1189e871e577d.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Default/Divider/divider-004.png"
-dest_files=["res://.godot/imported/divider-004.png-39c5f5b6a8952d7951d1189e871e577d.ctex"]
 
 [params]
 

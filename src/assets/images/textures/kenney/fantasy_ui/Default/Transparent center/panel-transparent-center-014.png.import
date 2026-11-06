@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7i0f82g0iwmb"
-path="res://.godot/imported/panel-transparent-center-014.png-292e6303c037eadc64df390ab146d10e.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/images/textures/kenney/fantasy_ui/Default/Transparent center/panel-transparent-center-014.png"
-dest_files=["res://.godot/imported/panel-transparent-center-014.png-292e6303c037eadc64df390ab146d10e.ctex"]
 
 [params]
 
