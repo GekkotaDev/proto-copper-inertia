@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://p0awche8540i"]
 
 [ext_resource type="Script" uid="uid://du6wcqyymqprx" path="res://scenes/screens/battles/battle_screen/battle_screen.gd" id="1_t5l6e"]
+[ext_resource type="Script" uid="uid://dxls88pgbp5q1" path="res://scripts/resources/tree_template.gd" id="2_rddye"]
 [ext_resource type="Script" uid="uid://b0wy14skk4x6e" path="res://addons/gesture_recognizer/scripts/ControlGesture.gd" id="3_ghy0a"]
 [ext_resource type="Script" uid="uid://bs0ma3rctmeqx" path="res://scripts/nodes/slots/tree_slot_3d.gd" id="4_6fb0w"]
 [ext_resource type="Script" uid="uid://cmgx5y1ckojyx" path="res://scripts/nodes/slots/tree_slot.gd" id="5_e7fpm"]
 [ext_resource type="Theme" uid="uid://b4gbrahp1qqmq" path="res://assets/themes/galacticlake/clean_dark/clean_dark.tres" id="6_6wcq2"]
 [ext_resource type="PackedScene" uid="uid://bccmrvj5b34k7" path="res://scenes/views/dialogue_balloon/balloon.tscn" id="7_vrjio"]
-[ext_resource type="Theme" uid="uid://8kbot544ig1u" path="res://assets/themes/nathanhoad/dialogue_manager/dialogue_manager.tres" id="8_wk33f"]
-[ext_resource type="Script" uid="uid://k1svsrk271da" path="res://cases/ui/scripts/nodes/visibility_reducer.gd" id="9_fgcsj"]
-[ext_resource type="Script" uid="uid://dwxc0hgv1fm4v" path="res://cases/ui/scripts/nodes/actions/go_action_pressed.gd" id="10_cnm8g"]
-[ext_resource type="PackedScene" uid="uid://dnlp38obwt4pb" path="res://scenes/screens/battles/battle_screen/subtree/act/act_container.tscn" id="10_sxnju"]
-[ext_resource type="Script" uid="uid://bsr4xae8p1i83" path="res://addons/goactions/scripts/go_action_caller.gd" id="11_odniy"]
 
 [sub_resource type="Curve" id="Curve_nup64"]
 _data = [Vector2(0.1, 0.5), 0.0, 0.0, 0, 0, Vector2(0.5, 0.90000004), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
@@ -19,11 +15,19 @@ point_count = 3
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nup64"]
 size = Vector2(1152, 648)
 
-[sub_resource type="GDScript" id="GDScript_uyk0o"]
-
-[node name="BattleScreen" type="Node" unique_id=1474230426]
+[node name="BattleScreen" type="Node" unique_id=1474230426 node_paths=PackedStringArray("template")]
 script = ExtResource("1_t5l6e")
+template = NodePath("TreeTemplate")
 metadata/_custom_type_script = "uid://dpxn232fvunp8"
+
+[node name="TreeTemplate" type="Node" parent="." unique_id=1374089708 node_paths=PackedStringArray("slots")]
+script = ExtResource("2_rddye")
+slots = {
+&"0": NodePath("../ViewportRoot/EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer/SubViewport/TreeSlot3D"),
+&"1": NodePath("../ViewportRoot/EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer2/SubViewport/TreeSlot3D"),
+&"2": NodePath("../ViewportRoot/EntitiesContainer/SubViewport/HBoxContainer/SubViewportContainer3/SubViewport/TreeSlot3D")
+}
+metadata/_custom_type_script = "uid://dxls88pgbp5q1"
 
 [node name="DrawRoot" type="Node2D" parent="." unique_id=1000848683]
 position = Vector2(576, 324)
@@ -69,6 +73,8 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+offset_top = -324.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 64
@@ -118,7 +124,7 @@ script = ExtResource("4_6fb0w")
 key = &"mob"
 metadata/_custom_type_script = "uid://bs0ma3rctmeqx"
 
-[node name="BackgroundSlot" type="Node" parent="ViewportRoot/EntitiesContainer/SubViewport" unique_id=2126694714]
+[node name="BackgroundSlot" type="Node" parent="ViewportRoot/EntitiesContainer/SubViewport/HBoxContainer" unique_id=2126694714]
 script = ExtResource("5_e7fpm")
 key = &"background"
 metadata/_custom_type_script = "uid://cmgx5y1ckojyx"
@@ -182,164 +188,3 @@ grow_vertical = 0
 
 [node name="DialogueBalloon" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals" unique_id=38036521 instance=ExtResource("7_vrjio")]
 visible = false
-
-[node name="Control" type="Control" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals" unique_id=611693580]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("8_wk33f")
-
-[node name="VisibilityReducer" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=1611330952 node_paths=PackedStringArray("nodes")]
-script = ExtResource("9_fgcsj")
-test = SubResource("GDScript_uyk0o")
-nodes = {
-&"act": NodePath("../ActContainer"),
-&"choice": NodePath("../ChoiceContainer"),
-&"flee": NodePath("../FleeContainer"),
-&"null": NodePath("../NullContainer"),
-&"use": NodePath("../UseContainer")
-}
-metadata/_custom_type_script = "uid://k1svsrk271da"
-
-[node name="ActContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=501965613]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PanelContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ActContainer" unique_id=1261441984 instance=ExtResource("10_sxnju")]
-layout_mode = 2
-
-[node name="UseContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=308556544]
-visible = false
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PanelContainer" type="PanelContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/UseContainer" unique_id=665408355]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/UseContainer/PanelContainer" unique_id=2005241549]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/UseContainer/PanelContainer/MarginContainer" unique_id=1005864354]
-layout_mode = 2
-
-[node name="FleeContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=750276864]
-visible = false
-layout_mode = 0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PanelContainer" type="PanelContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/FleeContainer" unique_id=1021532761]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/FleeContainer/PanelContainer" unique_id=1515063]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/FleeContainer/PanelContainer/MarginContainer" unique_id=1007864954]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Fleed!"
-
-[node name="ChoiceContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=1369708536]
-visible = false
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="PanelContainer" type="PanelContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer" unique_id=329181543]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer" unique_id=84143774]
-layout_mode = 2
-theme_override_constants/separation = 32
-alignment = 1
-
-[node name="ActButton" type="Button" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer" unique_id=1129149186]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Act"
-
-[node name="GoActionPressed" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/ActButton" unique_id=209052925 node_paths=PackedStringArray("button", "dispatch")]
-script = ExtResource("10_cnm8g")
-button = NodePath("..")
-dispatch = NodePath("GoActionCaller")
-metadata/_custom_type_script = "uid://dwxc0hgv1fm4v"
-
-[node name="GoActionCaller" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/ActButton/GoActionPressed" unique_id=487883953 node_paths=PackedStringArray("target_node")]
-script = ExtResource("11_odniy")
-target_node = NodePath("../../../../../../VisibilityReducer")
-method_name = &"reduce"
-parameters = [&"act"]
-metadata/_custom_type_script = "uid://bsr4xae8p1i83"
-
-[node name="UseButton" type="Button" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer" unique_id=466280699]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Use"
-
-[node name="GoActionPressed" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/UseButton" unique_id=411388773 node_paths=PackedStringArray("button", "dispatch")]
-script = ExtResource("10_cnm8g")
-button = NodePath("..")
-dispatch = NodePath("GoActionCaller")
-metadata/_custom_type_script = "uid://dwxc0hgv1fm4v"
-
-[node name="GoActionCaller" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/UseButton/GoActionPressed" unique_id=269457467 node_paths=PackedStringArray("target_node")]
-script = ExtResource("11_odniy")
-target_node = NodePath("../../../../../../VisibilityReducer")
-method_name = &"reduce"
-parameters = [&"use"]
-metadata/_custom_type_script = "uid://bsr4xae8p1i83"
-
-[node name="FleeButton" type="Button" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer" unique_id=434639868]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Flee"
-
-[node name="GoActionPressed" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/FleeButton" unique_id=520445651 node_paths=PackedStringArray("button", "dispatch")]
-script = ExtResource("10_cnm8g")
-button = NodePath("..")
-dispatch = NodePath("GoActionCaller")
-metadata/_custom_type_script = "uid://dwxc0hgv1fm4v"
-
-[node name="GoActionCaller" type="Node" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control/ChoiceContainer/PanelContainer/HBoxContainer/FleeButton/GoActionPressed" unique_id=189112528]
-script = ExtResource("11_odniy")
-metadata/_custom_type_script = "uid://bsr4xae8p1i83"
-
-[node name="NullContainer" type="MarginContainer" parent="ViewportRoot/UserInterfaceContainer/SubViewport/Control/Modals/Control" unique_id=280000376]
-visible = false
-layout_mode = 0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Node3D" type="Node3D" parent="." unique_id=846013263]
