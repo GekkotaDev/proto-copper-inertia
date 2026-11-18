@@ -26,6 +26,7 @@ class_name MobData extends Resource
 @export var field_scene: PackedScene
 
 @export_group("Data")
+@export var team: StringName
 @export var name: String
 @export var nickname: String
 @export var attributes: Dictionary[StringName, MobAttribute]
@@ -34,3 +35,10 @@ class_name MobData extends Resource
 @export var spawn_dialogue: DialogueResource
 @export var battle_dialogue: DialogueResource
 @export var other_dialogue: DialogueResource
+
+
+func with_attribute(attr: StringName, callback: Callable):
+	var attribute := attributes[attr]
+
+	if attribute:
+		return callback.call(attribute)

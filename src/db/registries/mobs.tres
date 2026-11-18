@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Registry" format=3 uid="uid://cj6dd1fj0x73d"]
+[gd_resource type="Resource" script_class="MobRegistry" format=3 uid="uid://cj6dd1fj0x73d"]
 
-[ext_resource type="Script" uid="uid://dqtv77mng5dyh" path="res://addons/yard/registry.gd" id="1_hwrtf"]
+[ext_resource type="Script" uid="uid://dovn655pcgk46" path="res://scripts/resources/registries/mob_registry.gd" id="1_gi83s"]
 
 [resource]
-script = ExtResource("1_hwrtf")
+script = ExtResource("1_gi83s")
 _version = 2
 _scan_rulesets = Array[Dictionary]([{
 &"allowed_file_extensions": Array[String]([]),

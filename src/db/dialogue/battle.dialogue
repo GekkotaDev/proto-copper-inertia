@@ -1,0 +1,46 @@
+~ start
+
+# Percent sign means select one randomly.
+% ... [next=auto]
+% Battle initiated! [next=auto]
+% X traipsed into battle! [next=auto]
+Foo
+=> loop
+
+
+~ loop
+
+if screen.queue.has_team_lost("teams/allies")
+    Loss text
+    do screen.end("lost")
+    => END
+
+if screen.queue.has_team_lost("teams/enemies")
+    Win text
+    do screen.end("won")
+    => END
+
+do screen.queue.next()
+if screen.queue.next_member.data.team == "teams/enemies"
+    => wait
+=> prompt
+
+
+~ wait
+Enemy's turn
+do screen.act(screen.queue.team_of("teams/allies"))
+
+
+~ prompt
+
+- Action
+    do screen.act(screen.queue.team_of("teams/enemies"))
+    => loop
+- Use
+    do screen.use()
+    => loop
+- Flee
+    do screen.end("flee")
+    => END
+
+=> END

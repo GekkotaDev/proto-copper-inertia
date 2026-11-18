@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dyoci2iroioyi"]
+
+[ext_resource type="Script" uid="uid://c1o33sk71uefo" path="res://addons/signal_sink/nodes/signal_sink.gd" id="1_rhx4t"]
+
+[node name="SignalSink" type="Node" unique_id=1495807111]
+script = ExtResource("1_rhx4t")
+metadata/_custom_type_script = "uid://c1o33sk71uefo"

@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name DialogueBalloon extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
 

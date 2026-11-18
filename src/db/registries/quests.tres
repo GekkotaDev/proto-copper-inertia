@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Registry" format=3 uid="uid://d3m3hl5enbdqj"]
+[gd_resource type="Resource" script_class="TypedRegistry" format=3 uid="uid://d3m3hl5enbdqj"]
 
 [ext_resource type="Script" uid="uid://dqtv77mng5dyh" path="res://addons/yard/registry.gd" id="1_jtbv2"]
 

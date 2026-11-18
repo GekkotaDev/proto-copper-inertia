@@ -1,4 +1,5 @@
 #! This should be abstract base class
+@abstract
 class_name TurnBasedEntity extends Node3D
 
 signal on_turn_ended
@@ -6,6 +7,7 @@ signal on_turn_ended
 @export_group("Agent")
 @export var appearance: Node
 @export var ai: BTPlayer
+@export var data: MobData
 
 @export_category("Internals")
 @export var _shaker: ShakerComponent
@@ -17,6 +19,8 @@ var shaker: ShakerComponent:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group(data.team)
+
 	_shaker.custom_target = true
 	_shaker.Targets.clear()
 	_shaker.Targets.append(appearance)
@@ -31,8 +35,5 @@ func _ready() -> void:
 	)
 
 
-#! Important for map_deck() and filter_deck()
-func query_data():
-	pass
-
-#! Reuse code in thesis game!!!
+@abstract
+func act(entities: Array[TurnBasedEntity])

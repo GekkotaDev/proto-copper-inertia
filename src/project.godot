@@ -41,6 +41,7 @@ PhantomCameraManager="*uid://duq6jhf6unyis"
 Console="*uid://cvj5sigf872l4"
 SceneLoader="*uid://edkfplkj2dgu"
 DialogueManager="*uid://c3rodes2l3gxb"
+EventBus="*uid://dyoci2iroioyi"
 
 [debug_draw_3d]
 
@@ -52,7 +53,7 @@ runtime/balloon_path="res://scenes/views/dialogue_balloon/balloon.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/StaticMeshMerger/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/asset_placer/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gesture_recognizer/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/juicee/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/lib.unsave/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/quill-ide/plugin.cfg", "res://addons/rich_text_3d/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
+enabled=PackedStringArray("res://addons/InstanceDock/plugin.cfg", "res://addons/SmoothScroll/plugin.cfg", "res://addons/StaticMeshMerger/plugin.cfg", "res://addons/aspect_ratio_resize_container/plugin.cfg", "res://addons/asset_placer/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/controller_icons/plugin.cfg", "res://addons/csg_blockout/plugin.cfg", "res://addons/custom_theme_overrides/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/gesture_recognizer/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/goactions/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/hide_private_properties/plugin.cfg", "res://addons/inspector_tabs/plugin.cfg", "res://addons/juicee/plugin.cfg", "res://addons/kenyoni/remove_orphan_uid/plugin.cfg", "res://addons/lib.editor_settings/plugin.cfg", "res://addons/lib.main_screen_buttons/plugin.cfg", "res://addons/lib.signal_sink/plugin.cfg", "res://addons/lib.unsave/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/limbo_console/plugin.cfg", "res://addons/log/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/quill-ide/plugin.cfg", "res://addons/rich_text_3d/plugin.cfg", "res://addons/runtime_debug_tools/plugin.cfg", "res://addons/scenic/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/spanning_table/plugin.cfg", "res://addons/spark/plugin.cfg", "res://addons/worstconcept-saferesourceformat/plugin.cfg", "res://addons/xesa/ExposeThemProperties/plugin.cfg", "res://addons/yard/plugin.cfg")
 
 [file_customization]
 
@@ -88,6 +89,10 @@ limbo_console_search_history={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":82,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://db/dialogue/battle.dialogue", "res://db/dialogue/example.dialogue")
 
 [limbo_ai]
 

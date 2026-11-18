@@ -232,3 +232,9 @@ archive_sha = "42b4bbd7ce6efa726abc6e927328d349887c9343fe53900a5083860c1848749b"
 name = "orchestrator"
 url = "https://github.com/CraterCrash/godot-orchestrator/releases/download/v2.5.stable/godot-orchestrator-v2.5-stable-plugin.zip"
 archive_sha = "3e4bab7811b89002627495973e1aa0fdf502bb8cec718a2693cce354d203efd7"
+
+[[dependency]]
+name = "df-godot-utils"
+git = "https://github.com/dragon1freak/df-godot-utils"
+rev = "97058be28d2f496aa050a58577921b5f4dc72c71"
+sha = "97058be28d2f496aa050a58577921b5f4dc72c71"
