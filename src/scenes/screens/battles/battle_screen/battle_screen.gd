@@ -18,9 +18,6 @@ signal battle_ended
 
 var template := TreeTemplate.new()
 
-var entities: Array[TurnBasedEntity] = []
-var entities_deck: Array[TurnBasedEntity] = []
-
 var _player: MobData
 
 
@@ -50,15 +47,12 @@ func _ready() -> void:
 			break
 		var entity: TurnBasedEntity = opponents[index].battle_scene.instantiate()
 		template.add_child(&"mob", entity)
-		entities.append(entity)
 
 	var mobs := MOBS as MobRegistry
 	_player = mobs.typed_load_entry(&"player")
 	
 	if _player:
-		entities.append(_player)
-
-	queue.party.append(_player)
+		queue.party.append(_player)
 	queue.party.append_array(opponents)
 
 	dialogue_balloon.start()
