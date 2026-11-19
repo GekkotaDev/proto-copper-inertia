@@ -28,6 +28,9 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
+# Git LFS adaptations
+assets/**/*.import
+
 #? GDUnit4
 reports
 
