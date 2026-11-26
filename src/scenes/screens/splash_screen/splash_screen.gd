@@ -11,6 +11,6 @@ func _ready():
 func next_scene(animation_name: StringName):
 	if not animation_name.contains("splash"):
 		return
-	
+
 	MultiSceneManager.global.queue_set_scene(&"Main Menu")
 	MultiSceneManager.global.apply()

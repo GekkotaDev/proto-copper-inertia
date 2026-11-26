@@ -4,6 +4,19 @@ extends Node
 var subcommands: Array[ConsoleCommand] = []
 
 
+func _init() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	for node in get_children():
+		if node is ConsoleCommand:
+			subcommands.append(node)
+	_register_commands(subcommands)
+	Log.info("Developer console initialized")
+
+
 func throw(code: Error, stack: Array[Dictionary], message: String):
 	get_tree().paused = true
 	LimboConsole.warn("PAUSED!")
@@ -46,19 +59,6 @@ func warn(message: String):
 func error(message: String):
 	Log.error.call(message)
 	LimboConsole.error.call(message)
-
-
-func _init() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	for node in get_children():
-		if node is ConsoleCommand:
-			subcommands.append(node)
-	_register_commands(subcommands)
-	Log.info("Developer console initialized")
 
 
 func _register_commands(commands: Array[ConsoleCommand]):

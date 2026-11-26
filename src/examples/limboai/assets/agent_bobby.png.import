@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlo1ine6p5di4"
-path="res://.godot/imported/agent_bobby.png-378f37fbbe85aa2ff4a4ef54ae31688f.ctex"
+path="res://.godot/imported/agent_bobby.png-8c7c0553d4eefdb06245554fd2603238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/limboai/assets/agent_bobby.png"
-dest_files=["res://.godot/imported/agent_bobby.png-378f37fbbe85aa2ff4a4ef54ae31688f.ctex"]
+source_file="res://demo/assets/agent_bobby.png"
+dest_files=["res://.godot/imported/agent_bobby.png-8c7c0553d4eefdb06245554fd2603238.ctex"]
 
 [params]
 

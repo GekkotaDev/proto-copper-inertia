@@ -8,7 +8,6 @@ signal on_turn_ended
 @export var appearance: Node
 @export var ai: BTPlayer
 @export var data: MobData
-
 @export_category("Internals")
 @export var _shaker: ShakerComponent
 

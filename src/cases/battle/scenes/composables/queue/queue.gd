@@ -1,13 +1,9 @@
 @icon("res://addons/at-icons/node/arrows_clockwise.svg")
-
 class_name TurnBasedQueue extends Node
-
 
 signal victory(team: StringName)
 
-
 @export var party: Array[MobData] = []
-
 @export_group("Teams", "team_")
 @export var team_good: StringName
 @export var team_bad: StringName

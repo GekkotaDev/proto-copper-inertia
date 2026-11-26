@@ -4,7 +4,6 @@ class_name SettingsControl extends Node
 @export_group("Settings")
 @export var settings_section: StringName
 @export var settings_key: StringName
-
 @export_group("UI")
 @export var control_node: Control
 @export var control_key: StringName

@@ -9,6 +9,7 @@ signal victory
 # It should not be modified within the _process. Define any logic that removes any entities within
 # the filter_deck() function that instead removes it from the deck.
 var entities: Array[TurnBasedEntity] = []
+
 var entities_deck: Array[TurnBasedEntity] = []:
 	get:
 		return entities_deck

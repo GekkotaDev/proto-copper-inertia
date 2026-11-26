@@ -1,5 +1,4 @@
 @icon("res://addons/at-icons/node2d/arrow_axes.svg")
-
 class_name SpawnerTransformPoint2D extends SpawnerTransform2D
 
 @export_group("Point Options")

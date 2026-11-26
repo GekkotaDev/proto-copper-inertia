@@ -9,7 +9,6 @@ enum TimerState {
 var is_active:
 	get:
 		return poll() == TimerState.TICKING
-
 var _timer: Timer
 var _state := TimerState.FRESH
 

@@ -2,8 +2,7 @@
 class_name VisibilityReducer extends Node
 
 @export var test: Script
-@export var nodes: Dictionary[StringName, Node] = { }
-
+@export var nodes: Dictionary[StringName, Node] = {}
 @export_group("Call", "call_")
 @export var call_enabled: bool
 @export var call_function: StringName

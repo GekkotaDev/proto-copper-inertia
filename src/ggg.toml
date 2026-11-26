@@ -88,6 +88,21 @@ map = [
 ]
 
 [[dependency]]
+name = "GdPlanningAI"
+url = "https://github.com/WahahaYes/GdPlanningAI/releases/download/v1.0.0/GdPlanningAI-1.0.0.zip"
+sha = "3eee49aebc633771caeb4c8a25a2058aad23845fa1bc1539b2c532062cc7e06b"
+map = [
+    { from = "GdPlanningAI-1.0.0/addons/GdPlanningAI", to = "addons/GdPlanningAI" },
+    { from = "GdPlanningAI-1.0.0/script_templates", to = "script_templates" },
+]
+
+[[dependency]]
+name = "gdstyle"
+url = "https://github.com/atelico/gdstyle/releases/download/v0.8.0/gdstyle-godot-plugin.zip"
+sha = "3e1d48e3338d157b05c179a02c466f2d532f6f3c818f7cc4eb852c128c6ea88f"
+map = [{ from = "addons/gdstyle" }]
+
+[[dependency]]
 name = "gdUnit4"
 url = "https://github.com/MikeSchulze/gdUnit4/archive/refs/tags/v6.0.0.zip"
 map = [{ from = "gdUnit4-6.0.0/addons/gdUnit4", to = "addons/gdUnit4" }]
@@ -267,10 +282,17 @@ rev = "ac618d0b3989fd9797f1ac653c2a899b2fcd0d45"
 map = [{ from = "addons/rich_text_3d" }]
 
 [[dependency]]
-name = "scenic"
-url = "https://github.com/flown-dev-1/Scenic/releases/download/v2.0.0/scenic_v2.0.0.zip"
-sha = "911a98aa230c5dd930b142cea79c1e4fecb1e59addd3638008a94b07259daddc"
-map = [{ from = "", to = "addons/scenic" }]
+name = "scene_manager"
+url = "https://github.com/glass-brick/Scene-Manager/archive/refs/tags/v2.1.0.zip"
+map = [
+    { from = "Scene-Manager-2.1.0/addons/scene_manager", to = "addons/scene_manager" },
+]
+
+# [[dependency]]
+# name = "scenic"
+# url = "https://github.com/flown-dev-1/Scenic/releases/download/v2.0.0/scenic_v2.0.0.zip"
+# sha = "911a98aa230c5dd930b142cea79c1e4fecb1e59addd3638008a94b07259daddc"
+# map = [{ from = "", to = "addons/scenic" }]
 
 [[dependency]]
 name = "shaker"
@@ -301,6 +323,13 @@ name = "spanning_table"
 url = "https://github.com/Magodra/SpanningTableContainer/archive/refs/tags/v1.1.0.zip"
 map = [
     { from = "SpanningTableContainer-1.1.0/addons/spanning_table", to = "addons/spanning_table" },
+]
+
+[[dependency]]
+name = "StyleboxFancy"
+url = "https://github.com/MellowDye/StyleBoxFancy/archive/refs/tags/v1.3.5.zip"
+map = [
+    { from = "StyleBoxFancy-1.3.5/addons/StyleboxFancy", to = "addons/StyleboxFancy" },
 ]
 
 # [[dependency]]

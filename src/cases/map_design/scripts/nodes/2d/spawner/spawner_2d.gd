@@ -1,11 +1,43 @@
 @icon("res://addons/at-icons/node2d/factory.svg")
 
 @abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
 @tool
 class_name Spawner2D extends Marker2D
 
 @export_group("Creation")
 @export var parent_node: Node
+
 @export var transform_node: SpawnerTransform2D:
 	set(value):
 		update_configuration_warnings()

@@ -4,17 +4,15 @@ extends LimboState
 @export var alert_area: Area3D
 @export var alert_groups: Array[StringName] = []
 
-#* Body
+# * Body
 @onready var body: CharacterBody3D = blackboard.get_var(&"parent")
 @onready var speed: float = blackboard.get_var(&"speed")
-
-#* Navigation
+# * Navigation
 @onready var navigation_agent: NavigationAgent3D = blackboard.get_var(&"navigation_agent")
 @onready var path: Path3D = blackboard.get_var(&"path")
 @onready var timeout: Vector2 = blackboard.get_var(&"timeout")
 
 var timer := Timer.new()
-
 var timer_poll := TimerPoll.new(timer)
 var alert_poll := SignalPoll.new(alert_area.body_entered)
 

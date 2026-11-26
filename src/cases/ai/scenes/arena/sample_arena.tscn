@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cyla5a55wbyi"]
+
+[ext_resource type="Script" uid="uid://cmpka75gru8kx" path="res://cases/ai/scripts/nodes/ai_exec_world.gd" id="1_hy180"]
+[ext_resource type="PackedScene" uid="uid://bccmrvj5b34k7" path="res://scenes/views/dialogue_balloon/balloon.tscn" id="2_86k2c"]
+
+[node name="SampleArena" type="Node" unique_id=958864847]
+script = ExtResource("1_hy180")
+metadata/_custom_type_script = "uid://cmpka75gru8kx"
+
+[node name="Control" type="Control" parent="." unique_id=179381136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExampleBalloon" parent="Control" unique_id=38036521 instance=ExtResource("2_86k2c")]

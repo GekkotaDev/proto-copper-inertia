@@ -1,30 +1,201 @@
 [gd_scene format=3 uid="uid://c3hfwc4wetixq"]
 
 [ext_resource type="Script" uid="uid://ba4faen7l7w8g" path="res://scenes/screens/main_menu/main_menu.gd" id="1_0fmn3"]
-[ext_resource type="Script" uid="uid://caq0ya3k4gp0s" path="res://cases/map_design/scripts/nodes/actions/go_action_signal_link.gd" id="1_xf7w6"]
-[ext_resource type="Script" uid="uid://ducdj2y18k3xs" path="res://addons/goactions/scripts/go_action_sequence.gd" id="2_25jul"]
-[ext_resource type="Script" uid="uid://cvmx83rassl6k" path="res://cases/map_design/scripts/nodes/actions/go_action_receiver.gd" id="2_enpo5"]
+[ext_resource type="Texture2D" uid="uid://cyp72odcbelpn" path="res://assets/images/backgrounds/main_menu.png" id="2_8j8l0"]
+[ext_resource type="VideoStream" uid="uid://cjhric08adsir" path="res://assets/videos/MainMenu_11.ogv" id="2_ty5v0"]
+[ext_resource type="Script" uid="uid://c50adr7oqd8uj" path="res://addons/just-another-menu-system/menu_router.gd" id="3_0urj7"]
+[ext_resource type="Shader" uid="uid://daoq8eg8ry78d" path="res://assets/shaders/uts.gdshader" id="4_8vo2r"]
+[ext_resource type="Script" uid="uid://cc72qywj4gb4a" path="res://addons/just-another-menu-system/menu_container.gd" id="4_uamlo"]
+[ext_resource type="Script" uid="uid://dmtb8hlmmqlvt" path="res://addons/juicee/core/juicee_player.gd" id="5_4kug3"]
+[ext_resource type="Script" uid="uid://8xfugwudyp6n" path="res://addons/juicee/effects/juicee_effect.gd" id="6_8h7de"]
+[ext_resource type="Script" uid="uid://v73jghomx6uw" path="res://addons/juicee/core/juicee_sequence.gd" id="7_8vo2r"]
+[ext_resource type="Script" uid="uid://bbgou6d1t5c47" path="res://cases/actions/scripts/nodes/ui/go_button.gd" id="7_xdv8n"]
+[ext_resource type="Script" uid="uid://bgquuvwti06mk" path="res://cases/actions/scripts/nodes/ui/go_action_juice.gd" id="9_ty5v0"]
+[ext_resource type="FontFile" uid="uid://bggtscia48ah4" path="res://assets/typefaces/taste_bread/Taste Bread HD.otf" id="9_xdv8n"]
+[ext_resource type="Script" uid="uid://qynw8bfkamur" path="res://addons/juicee/effects/shader_parameter_effect.gd" id="10_xdv8n"]
+[ext_resource type="Script" uid="uid://b3me131uvm1k" path="res://cases/actions/scripts/nodes/go_action_script.gd" id="13_8j8l0"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_56pq6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ty5v0"]
+shader = ExtResource("4_8vo2r")
+shader_parameter/use_sprite_alpha = false
+shader_parameter/use_transition_texture = true
+shader_parameter/transition_texture = SubResource("PlaceholderTexture2D_56pq6")
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0, 0)
+shader_parameter/invert = false
+shader_parameter/grid_size = Vector2(1, 1)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = false
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(0, 0)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(2, 2)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 1
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress = 0.0
+shader_parameter/progress_bias = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lcm2b"]
+shader = ExtResource("4_8vo2r")
+shader_parameter/use_sprite_alpha = true
+shader_parameter/use_transition_texture = false
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0, 0)
+shader_parameter/invert = false
+shader_parameter/grid_size = Vector2(1, 1)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = false
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(0, 0)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(2, 2)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 1
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress = 0.0
+shader_parameter/progress_bias = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3f7xq"]
+bg_color = Color(1, 1, 1, 0.039215688)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujhak"]
+
+[sub_resource type="Theme" id="Theme_7q4eu"]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("9_xdv8n")
+Button/styles/hover = SubResource("StyleBoxFlat_3f7xq")
+Button/styles/normal = SubResource("StyleBoxEmpty_ujhak")
+
+[sub_resource type="Resource" id="Resource_8vo2r"]
+script = ExtResource("10_xdv8n")
+parameter_name = "rotation_angle"
+from_value = null
+to_value = 45.0
+duration = 1.0
+restore_on_end = false
+
+[sub_resource type="Resource" id="Resource_lcm2b"]
+script = ExtResource("10_xdv8n")
+parameter_name = "progress"
+from_value = null
+to_value = 2.0
+duration = 1.0
+restore_on_end = false
+
+[sub_resource type="Resource" id="Resource_nup64"]
+script = ExtResource("7_8vo2r")
+effects = Array[ExtResource("6_8h7de")]([SubResource("Resource_8vo2r"), SubResource("Resource_lcm2b")])
+parallel = true
+graph_connections = PackedStringArray()
+metadata/_custom_type_script = "uid://v73jghomx6uw"
+
+[sub_resource type="GDScript" id="GDScript_r81w6"]
+script/source = "func _init(action: GoAction) -> void:
+	RenderingServer.set_default_clear_color(Color.BLACK)
+	action.get_tree().quit.call_deferred()
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ce3ld"]
+shader = ExtResource("4_8vo2r")
+shader_parameter/use_sprite_alpha = true
+shader_parameter/use_transition_texture = false
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0.5, 0.5)
+shader_parameter/invert = true
+shader_parameter/grid_size = Vector2(25, 16)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = false
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(0, 0)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(1, 1)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 1
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress = 0.0
+shader_parameter/progress_bias = Vector2(0.1, 0)
 
 [node name="Scene" type="Node" unique_id=671390750]
 script = ExtResource("1_0fmn3")
-metadata/_custom_type_script = "uid://dpxn232fvunp8"
 
-[node name="Actions" type="Node" parent="." unique_id=1326124214]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=128758311]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8j8l0")
+expand_mode = 3
 
-[node name="GoActionReceiver" type="Node" parent="Actions" unique_id=156227300]
-script = ExtResource("2_enpo5")
-metadata/_custom_type_script = "uid://cvmx83rassl6k"
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="TextureRect" unique_id=838639389]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_ty5v0")
+autoplay = true
+expand = true
+loop = true
 
-[node name="MainMenu" type="Control" parent="." unique_id=969279259]
-process_mode = 3
+[node name="MenuRouter" type="Control" parent="." unique_id=1941315865]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_0urj7")
+metadata/_custom_type_script = "uid://c50adr7oqd8uj"
 
-[node name="GridContainer" type="GridContainer" parent="MainMenu" unique_id=1840729669]
+[node name="MainMenu" type="Control" parent="MenuRouter" unique_id=2061022914 node_paths=PackedStringArray("focus_target")]
+material = SubResource("ShaderMaterial_ty5v0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_uamlo")
+start_open = true
+focus_target = NodePath("")
+metadata/_custom_type_script = "uid://cc72qywj4gb4a"
+
+[node name="JuiceePlayer" type="Node" parent="MenuRouter/MainMenu" unique_id=407353835]
+script = ExtResource("5_4kug3")
+sequences = Array[ExtResource("7_8vo2r")]([null])
+metadata/_custom_type_script = "uid://dmtb8hlmmqlvt"
+
+[node name="GridContainer" type="GridContainer" parent="MenuRouter/MainMenu" unique_id=1840729669]
+material = SubResource("ShaderMaterial_lcm2b")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,67 +204,138 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="Artwork" type="Control" parent="MainMenu/GridContainer" unique_id=1920126385]
+[node name="Artwork" type="Control" parent="MenuRouter/MainMenu/GridContainer" unique_id=1920126385]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Menu" type="Control" parent="MainMenu/GridContainer" unique_id=2083660005]
+[node name="Menu" type="Control" parent="MenuRouter/MainMenu/GridContainer" unique_id=2083660005]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource("Theme_7q4eu")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="MainMenu/GridContainer/Menu" unique_id=736992539]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 33.0
-offset_bottom = 23.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 16
-
-[node name="Button" type="Button" parent="MainMenu/GridContainer/Menu/HBoxContainer" unique_id=728418421]
-layout_mode = 2
+[node name="PlayButton" type="Button" parent="MenuRouter/MainMenu/GridContainer/Menu" unique_id=422354420]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 211.0
+offset_right = 485.0
+offset_bottom = 305.0
 text = "Play"
 
-[node name="GoActionSignalLink" type="Node" parent="MainMenu/GridContainer/Menu/HBoxContainer/Button" unique_id=343343039 node_paths=PackedStringArray("action_nodes", "target_node")]
-script = ExtResource("1_xf7w6")
-action_nodes = [NodePath("../GoActionSequence")]
-target_node = NodePath("..")
-target_signal = &"pressed"
-metadata/_custom_type_script = "uid://caq0ya3k4gp0s"
-
-[node name="GoActionSequence" type="Node" parent="MainMenu/GridContainer/Menu/HBoxContainer/Button" unique_id=1745072972]
-script = ExtResource("2_25jul")
-metadata/_custom_type_script = "uid://ducdj2y18k3xs"
-
-[node name="Button2" type="Button" parent="MainMenu/GridContainer/Menu/HBoxContainer" unique_id=867079775]
-layout_mode = 2
-text = "Settings"
-
-[node name="GoActionSignalLink" type="Node" parent="MainMenu/GridContainer/Menu/HBoxContainer/Button2" unique_id=54312767 node_paths=PackedStringArray("action_nodes", "target_node")]
-script = ExtResource("1_xf7w6")
-action_nodes = [NodePath("../GoActionSequence")]
-target_node = NodePath("..")
-target_signal = &"pressed"
-metadata/_custom_type_script = "uid://caq0ya3k4gp0s"
-
-[node name="GoActionSequence" type="Node" parent="MainMenu/GridContainer/Menu/HBoxContainer/Button2" unique_id=372331905]
-script = ExtResource("2_25jul")
-metadata/_custom_type_script = "uid://ducdj2y18k3xs"
-
-[node name="Button3" type="Button" parent="MainMenu/GridContainer/Menu/HBoxContainer" unique_id=1122824731]
-layout_mode = 2
+[node name="QuitButton" type="Button" parent="MenuRouter/MainMenu/GridContainer/Menu" unique_id=108547270]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 460.0
+offset_right = 484.0
+offset_bottom = 554.0
 text = "Quit"
 
-[node name="GoActionSignalLink" type="Node" parent="MainMenu/GridContainer/Menu/HBoxContainer/Button3" unique_id=1966061903 node_paths=PackedStringArray("target_node")]
-script = ExtResource("1_xf7w6")
-target_node = NodePath("..")
-target_signal = &"pressed"
-metadata/_custom_type_script = "uid://caq0ya3k4gp0s"
+[node name="GoButton" type="Node" parent="MenuRouter/MainMenu/GridContainer/Menu/QuitButton" unique_id=974211976 node_paths=PackedStringArray("action", "button")]
+script = ExtResource("7_xdv8n")
+action = NodePath("../GoActionJuice")
+button = NodePath("..")
+metadata/_custom_type_script = "uid://bbgou6d1t5c47"
+
+[node name="GoActionJuice" type="Node" parent="MenuRouter/MainMenu/GridContainer/Menu/QuitButton" unique_id=2081142192 node_paths=PackedStringArray("action", "juice_player")]
+script = ExtResource("9_ty5v0")
+action = NodePath("../GoActionScript")
+juice_parameters = Dictionary[StringName, Variant]({
+&"progress": 0,
+&"rotation_angle": 0
+})
+juice_player = NodePath("JuiceePlayer")
+metadata/_custom_type_script = "uid://bgquuvwti06mk"
+
+[node name="JuiceePlayer" type="Node" parent="MenuRouter/MainMenu/GridContainer/Menu/QuitButton/GoActionJuice" unique_id=1937222353]
+script = ExtResource("5_4kug3")
+sequence = SubResource("Resource_nup64")
+target_path = NodePath("../../../../../../../TransitionRect")
+metadata/_custom_type_script = "uid://dmtb8hlmmqlvt"
+
+[node name="GoActionScript" type="Node" parent="MenuRouter/MainMenu/GridContainer/Menu/QuitButton" unique_id=890608464]
+script = ExtResource("13_8j8l0")
+code = SubResource("GDScript_r81w6")
+metadata/_custom_type_script = "uid://b3me131uvm1k"
+
+[node name="SettingsMenu" type="Control" parent="MenuRouter" unique_id=702119183]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_uamlo")
+metadata/_custom_type_script = "uid://cc72qywj4gb4a"
+
+[node name="JuiceePlayer" type="Node" parent="MenuRouter/SettingsMenu" unique_id=1205520869]
+script = ExtResource("5_4kug3")
+metadata/_custom_type_script = "uid://dmtb8hlmmqlvt"
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuRouter/SettingsMenu" unique_id=1076774979]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuRouter/SettingsMenu/MarginContainer" unique_id=1263207481]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TabContainer" type="TabContainer" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer" unique_id=1473393225]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Tab" type="ColorRect" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer/TabContainer" unique_id=313249318]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Tab2" type="ColorRect" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer/TabContainer" unique_id=1471588004]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer" unique_id=2031631756]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1984482367]
+layout_mode = 2
+text = "Apply"
+
+[node name="Button2" type="Button" parent="MenuRouter/SettingsMenu/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1647766329]
+layout_mode = 2
+text = "Cancel"
+
+[node name="MapsMenu" type="Control" parent="MenuRouter" unique_id=637065797]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_uamlo")
+metadata/_custom_type_script = "uid://cc72qywj4gb4a"
+
+[node name="OptionButton" type="OptionButton" parent="MenuRouter/MapsMenu" unique_id=186720433]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 20.0
+
+[node name="TransitionRect" type="ColorRect" parent="." unique_id=1277439040]
+material = SubResource("ShaderMaterial_ce3ld")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+color = Color(0, 0, 0, 1)

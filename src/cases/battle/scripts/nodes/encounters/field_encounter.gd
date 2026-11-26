@@ -1,10 +1,7 @@
-@abstract
-class_name FieldEncounter extends Node
+@tool
 
-
-## Trigger an encounter.
 @abstract
-func trigger() -> Error
+class_name FieldEncounter extends GoAction
 
 
 @abstract

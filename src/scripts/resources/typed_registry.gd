@@ -19,6 +19,7 @@ func typed_load_entry(
 @abstract
 func typed_load_entries(ids: Array[StringName])
 
+
 ## Loads all registered resources in a blocking manner. Returns a dictionary
 ## mapping string IDs to their loaded [Resource] instances.
 ## Missing or invalid entries are skipped.[br][br]
@@ -32,7 +33,7 @@ func typed_load_all_blocking()
 
 
 func load_entries(ids: Array[StringName]):
-	var entries: Dictionary[StringName, Resource] = { }
+	var entries: Dictionary[StringName, Resource] = {}
 
 	for id in ids:
 		entries[id] = load_entry(id)

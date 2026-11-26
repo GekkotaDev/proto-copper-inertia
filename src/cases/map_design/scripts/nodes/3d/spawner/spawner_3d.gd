@@ -1,11 +1,43 @@
 @icon("res://addons/at-icons/node3d/factory.svg")
 
 @abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
+@abstract
 @tool
 class_name Spawner3D extends Marker3D
 
 @export_group("Creation")
 @export var parent_node: Node
+
 @export var transform_node: SpawnerTransform3D:
 	set(value):
 		transform_node = value

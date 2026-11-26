@@ -7,7 +7,6 @@ var fired:
 			_awaited = false
 			return true
 		return false
-
 var _awaited := false
 
 

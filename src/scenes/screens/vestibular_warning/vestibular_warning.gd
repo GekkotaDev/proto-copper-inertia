@@ -1,8 +1,7 @@
-extends Scene
+extends Node
 
 @export var manager: StringName = &"global"
 @export var next_scene: StringName
-
 
 var read := false
 
@@ -22,11 +21,11 @@ func _input(event: InputEvent) -> void:
 		return
 	if event is InputEventJoypadMotion:
 		return
-	
+
 	if read:
 		return
 	read = true
-	
-	var scene_manager := MultiSceneManager.managers[manager]
-	scene_manager.queue_set_scene(next_scene)
-	scene_manager.apply()
+
+	var scene_manager := SceneManager
+	scene_manager.change_scene(next_scene)
+	#scene_manager.apply()

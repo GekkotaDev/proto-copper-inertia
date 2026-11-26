@@ -1,6 +1,6 @@
 class_name DIProvider extends Node
 
-@export var data: Dictionary[String, Variant] = { }
+@export var data: Dictionary[String, Variant] = {}
 @export var subtree: Node
 
 

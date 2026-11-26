@@ -3,7 +3,6 @@ extends PanelContainer
 const Model = preload("uid://x3cej701i1ny")
 
 @export var model: Model
-
 @export_group("UI")
 @export var root: Control
 @export var gesture: Gesture

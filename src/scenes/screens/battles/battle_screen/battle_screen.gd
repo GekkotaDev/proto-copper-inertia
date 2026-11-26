@@ -1,36 +1,21 @@
 class_name BattleScene extends Scene
 
+signal battle_ended
+
 const MOBS = preload("res://db/registries/mobs.tres")
 const MOVES = preload("res://db/registries/moves.tres")
-
 const Model = preload("uid://x3cej701i1ny")
-
-signal battle_ended
 
 @export var gesturizer: Gesture
 @export var model := preload("res://scenes/screens/battles/battle_screen/model.tres")
 @export var opponents: Array[MobData] = []
 @export var queue: TurnBasedQueue
-
 @export_category("Dialogue")
 # @export var dialogue: DialogueResource
 @export var dialogue_balloon: DialogueBalloon
 
 var template := TreeTemplate.new()
-
 var _player: MobData
-
-
-func on_battle_begin():
-	pass
-
-
-func on_battle_end():
-	pass
-
-
-func _start(data: Variant):
-	model.mobs = data.get(&"mobs")
 
 
 func _ready() -> void:
@@ -50,12 +35,24 @@ func _ready() -> void:
 
 	var mobs := MOBS as MobRegistry
 	_player = mobs.typed_load_entry(&"player")
-	
+
 	if _player:
 		queue.party.append(_player)
 	queue.party.append_array(opponents)
 
 	dialogue_balloon.start()
+
+
+func on_battle_begin():
+	pass
+
+
+func on_battle_end():
+	pass
+
+
+func _start(data: Variant):
+	model.mobs = data.get(&"mobs")
 
 
 func start(data: Variant):

@@ -1,16 +1,14 @@
 extends LimboState
 
 @export var resting_point: Marker3D
-
 @export_group("Alert")
 @export var alert_area: Area3D
 @export var alert_groups: Array[StringName] = []
 
-#* Body
+# * Body
 @onready var body: CharacterBody3D = blackboard.get_var(&"parent")
 @onready var speed: float = blackboard.get_var(&"speed")
-
-#* Navigation
+# * Navigation
 @onready var navigation_agent: NavigationAgent3D = blackboard.get_var(&"navigation_agent")
 
 var sleeping := false

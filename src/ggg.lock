@@ -159,11 +159,6 @@ url = "https://github.com/peter-kish/gloot/archive/refs/tags/v3.0.2.zip"
 archive_sha = "d4d08157860abbd0ccee9fc8657ebf79fdbe1ecb10f986343a3bfea417ff6937"
 
 [[dependency]]
-name = "scenic"
-url = "https://github.com/flown-dev-1/Scenic/releases/download/v2.0.0/scenic_v2.0.0.zip"
-archive_sha = "911a98aa230c5dd930b142cea79c1e4fecb1e59addd3638008a94b07259daddc"
-
-[[dependency]]
 name = "goactions"
 url = "https://github.com/wokidoo/GoActions/archive/refs/tags/v1.1.zip"
 archive_sha = "e4eef3b3cc86db0157dcfe23ffc12a6d139b675a635d0457da32c0c90dbbcec9"
@@ -229,12 +224,27 @@ url = "https://github.com/ramokz/phantom-camera/archive/refs/tags/v0.11.0.3.zip"
 archive_sha = "42b4bbd7ce6efa726abc6e927328d349887c9343fe53900a5083860c1848749b"
 
 [[dependency]]
-name = "orchestrator"
-url = "https://github.com/CraterCrash/godot-orchestrator/releases/download/v2.5.stable/godot-orchestrator-v2.5-stable-plugin.zip"
-archive_sha = "3e4bab7811b89002627495973e1aa0fdf502bb8cec718a2693cce354d203efd7"
-
-[[dependency]]
 name = "df-godot-utils"
 git = "https://github.com/dragon1freak/df-godot-utils"
 rev = "97058be28d2f496aa050a58577921b5f4dc72c71"
 sha = "97058be28d2f496aa050a58577921b5f4dc72c71"
+
+[[dependency]]
+name = "gdstyle"
+url = "https://github.com/atelico/gdstyle/releases/download/v0.8.0/gdstyle-godot-plugin.zip"
+archive_sha = "3e1d48e3338d157b05c179a02c466f2d532f6f3c818f7cc4eb852c128c6ea88f"
+
+[[dependency]]
+name = "StyleboxFancy"
+url = "https://github.com/MellowDye/StyleBoxFancy/archive/refs/tags/v1.3.5.zip"
+archive_sha = "5f9334aa9cbb981189d279e771014245f1049e2746e32ea6e1807af7e7de1c9a"
+
+[[dependency]]
+name = "scene_manager"
+url = "https://github.com/glass-brick/Scene-Manager/archive/refs/tags/v2.1.0.zip"
+archive_sha = "9b3a4b673df7355a3d0c645285530d96b33d13a699bec744cda7272b9e0fc229"
+
+[[dependency]]
+name = "GdPlanningAI"
+url = "https://github.com/WahahaYes/GdPlanningAI/releases/download/v1.0.0/GdPlanningAI-1.0.0.zip"
+archive_sha = "3eee49aebc633771caeb4c8a25a2058aad23845fa1bc1539b2c532062cc7e06b"

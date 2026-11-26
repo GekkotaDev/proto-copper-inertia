@@ -1,21 +1,6 @@
 @icon("res://addons/at-icons/node/window_terminal.svg")
-
 @abstract
 class_name ConsoleCommand extends ConsoleEntry
-
-
-class AutocompleteSource:
-	var argument_index: int
-	var completer: Callable
-
-
-	func _init(index: int) -> void:
-		argument_index = index
-
-
-	func maps_to(callback: Callable):
-		completer = callback
-
 
 @export var register: bool = true
 
@@ -39,3 +24,16 @@ func command() -> void
 
 @abstract
 func autocomplete() -> Array[AutocompleteSource]
+
+
+class AutocompleteSource:
+	var argument_index: int
+	var completer: Callable
+
+
+	func _init(index: int) -> void:
+		argument_index = index
+
+
+	func maps_to(callback: Callable):
+		completer = callback

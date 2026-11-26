@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1tx7u8ho0r4v"
-path="res://.godot/imported/agent_demon.png-cd5772d5e686fe718681808a34cb534e.ctex"
+path="res://.godot/imported/agent_demon.png-8a62722d1d31985ee3a39cfef745c53a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/limboai/assets/agent_demon.png"
-dest_files=["res://.godot/imported/agent_demon.png-cd5772d5e686fe718681808a34cb534e.ctex"]
+source_file="res://demo/assets/agent_demon.png"
+dest_files=["res://.godot/imported/agent_demon.png-8a62722d1d31985ee3a39cfef745c53a.ctex"]
 
 [params]
 

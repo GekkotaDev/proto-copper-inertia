@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ombnpn2edldt"
-path="res://.godot/imported/agent_summoner.png-a2b91cf84cd012087f3ee6429a15021d.ctex"
+path="res://.godot/imported/agent_summoner.png-3beb6fd299df05d9586c6b74edd2bbc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/limboai/assets/agent_summoner.png"
-dest_files=["res://.godot/imported/agent_summoner.png-a2b91cf84cd012087f3ee6429a15021d.ctex"]
+source_file="res://demo/assets/agent_summoner.png"
+dest_files=["res://.godot/imported/agent_summoner.png-3beb6fd299df05d9586c6b74edd2bbc6.ctex"]
 
 [params]
 

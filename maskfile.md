@@ -17,17 +17,9 @@ mise exec -- uv sync
 
 cd src
 
-mise exec -- ggg sync
-```
+mise exec -- ggg sync --force
 
-```pwsh
-mise i
-mise exec -- pnpm i
-mise exec -- uv sync
-
-cd src
-
-mise exec -- ggg sync
+run ./sh/replace.nu
 ```
 
 ## dev

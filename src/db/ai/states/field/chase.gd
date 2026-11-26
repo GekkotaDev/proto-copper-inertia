@@ -4,11 +4,10 @@ extends LimboState
 @export var chase_area: Area3D
 @export var chase_groups: Array[StringName] = []
 
-#* Body
+# * Body
 @onready var body: CharacterBody3D = blackboard.get_var(&"parent")
 @onready var speed: float = blackboard.get_var(&"speed")
-
-#* Navigation
+# * Navigation
 @onready var navigation_agent: NavigationAgent3D = blackboard.get_var(&"navigation_agent")
 @onready var target: Node3D = blackboard.get_var(&"path")
 

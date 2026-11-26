@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2uyxh7sy8qny"
-path="res://.godot/imported/weapon_ninja_star.png-9b3c50c957a54d66c5da73961a84b266.ctex"
+path="res://.godot/imported/weapon_ninja_star.png-be058a7d9eff80095d1c513b22f898e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/limboai/assets/weapon_ninja_star.png"
-dest_files=["res://.godot/imported/weapon_ninja_star.png-9b3c50c957a54d66c5da73961a84b266.ctex"]
+source_file="res://demo/assets/weapon_ninja_star.png"
+dest_files=["res://.godot/imported/weapon_ninja_star.png-be058a7d9eff80095d1c513b22f898e0.ctex"]
 
 [params]
 

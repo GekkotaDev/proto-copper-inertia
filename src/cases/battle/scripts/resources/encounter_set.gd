@@ -2,15 +2,18 @@ class_name EncounterSet extends Resource
 
 @export var condition: BehaviorTree
 @export var entities: Array[StringName]
+
 @export_group("Amount")
 @export var amount: int:
 	get:
 		return randi_range(lower_bounds, upper_bounds)
+
 @export var lower_bounds: int:
 	get:
 		return lower_bounds if lower_bounds > 0 else 0
 	set(value):
 		lower_bounds = value
+
 @export var upper_bounds: int
 
 
